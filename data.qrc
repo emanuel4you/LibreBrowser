@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>data/AppLogoColor.png</file>
+        <file>data/index.html</file>
+    </qresource>
+</RCC>
