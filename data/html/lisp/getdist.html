@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>getdist</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(getdist [point] [prompt])</h2>
+	<hr/>
+<p>Request the user to identify two points.</p>
+	<hr/>
+<p>This function requests the user to input a distance or to select one or more numbers, irrespective of the distance format currently set by the Units command. A prompt string can be defined to guide the user in providing input. It is not permissible to enter another <b>LISP</b> expression in response to the getdist function.</p>
+	<h4>EXAMPLES</h4>
+<p>The examples in this section illustrate the two methods for utilizing the getdist function.</p>
+	<ol>
+		<li>Two-point method: omit the point argument. The getpoint function will prompt the user for two points. The prompt for the initial point is defined by the prompt; <b>LibreCAD</b> will display "Second point:" for the selection of the second point. A guiding line extends from the first point to the target, assisting visually in selecting the second point.</li></br>
+	</ol>
+	<h4>EXAMPLE</h4>
+<p>(<b>getdist</b>)</p>
+<p>[pick first point]</p>
+<p>[pick second point] no prompt</p>
+<p>Second point:</p>
+<p>(<b>getdist</b> "Length of street: ")</p>
+<p>[pick first point]</p>
+<p>[pick second point] Length of street:</p>
+<p>Second point:</p>
+<p>10.5</p>
+	<ol>
+		<li>One-point method: include the point argument. The getpoint function will prompt the user for a single point. The prompt for the subsequent point is defined by the prompt. A guiding line extends from the first point to the target, assisting visually in selecting the second point.</li></br>
+	</ol>
+	<h4>EXAMPLE</h4>
+<p>[pick point] no prompt</p>
+	<ol>
+		<li></li></br>
+	</ol>
+<p>(<b>getdist</b> '(3.0 2.0) "Length of pipe: "))</p>
+<p>[pick point] Length of pipe:</p>
+	<h4>NOTE</h4>
+<p>For additional information, refer to the initget function.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/getangle.html" title="LISP Function (getangle [point] [prompt])">(getangle [point] [prompt])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/getcorner.html" title="LISP Function (getcorner point [prompt])">(getcorner point [prompt])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/getpoint.html" title="LISP Function (getpoint [point] [prompt])">(getpoint [point] [prompt])</a></p></b>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>nth</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(nth integer list)</h2>
+	<hr/>
+<p>Determine the nth item in the list.</p>
+	<hr/>
+<p>Identify the nth element within a list. This function proves to be particularly useful for extracting a specific element from lengthy lists.</p>
+<p>The integer argument signifies the position of the element to be extracted. It is important to note that the initial element in the list is indexed as 0; therefore, to access the third element, one should use the index 2. If the integer exceeds the total count of elements in the list (which is effectively the count minus one), the nth function will return nil.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> c '("one" "two" "three" "four"))<td/>
+	<td>(one two three four)<td/>
+	</tr>	<tr>
+	<td>(<b>nth</b> 2 c)<td/>
+	<td>three<td/>
+	</tr>	<tr>
+	<td>(<b>nth</b> 5 c)<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/last.html" title="LISP Function (last list)">(last list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/length.html" title="LISP Function (length list)">(length list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/reverse.html" title="LISP Function (reverse list)">(reverse list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+</body>
+</html>

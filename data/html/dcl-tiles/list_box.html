@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>list_box</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Tiles</h2>
+	<h2><b>: list_box</b></h2>
+	<hr/>
+<p>Display a <i>vertical</i> <b>list</b> of text, with optional scrollbar and</p>
+<p>title.     <b>DCL</b> Active Tile</p>
+	<hr/>
+<p>This active tile features a <b>list</b> box. When an item is selected by the user, it becomes highlighted. A scrollbar will automatically appear if the number of items exceeds the display capacity of the <b>list</b>_box tile.</p>
+<p>Creating and Modifying a List Box with LISP Functions</p>
+<p>To create and modify the <b>list</b> shown in the <b>list</b>_box tile, utilize the following [link]LISP functions:</p>
+	<ul>
+		<li>([link]start_list "key" int1 int2)</li></br>
+	</ul>
+<p>The start_list function requires three parameters. The <b>key</b> parameter denotes the name of the list_box tile. The int1 parameter indicates the <b>action</b> to be performed:</p>
+<p>int1 Meaning</p>
+<p>1    Modify a single item in the list.</p>
+<p>2    Append an item to the end of the list.</p>
+<p>3    Generate a new list; this is the default option.</p>
+<p>The int2 parameter specifies the item number to be modified (with the first item in the <b>list</b> being #0); int2 is applicable only when int1 is set to 1.</p>
+<p>For EXAMPLE:</p>
+<p>(start_list "L1" 1 3)     ; changes the fourth item in the list.</p>
+	<ul>
+		<li>([link]add_list "string")</li></br>
+	</ul>
+<p>To implement the change, employ the add_list function. The string parameter indicates the text to be added or substituted in the list:</p>
+<p>(start_list "L1" 1 3)     ; modifies the fourth item in the list.</p>
+<p>(add_list "New item")</p>
+<p>When start_list is in modification mode (int1 = 1), each invocation of add_list alters the same item. Conversely, when start_list is in addition mode (int1 = 2), each invocation of add_list appends a new item to the end of the list.</p>
+	<ul>
+		<li>([link]end_list)</li></br>
+	</ul>
+<p>To conclude the <b>list</b> processing, invoke the end_<b>list</b> function as follows:</p>
+<p>(start_list "L1" 1 3)     ; modifies the fourth item in the list.</p>
+<p>(add_list "New item")</p>
+<p>(end_list)</p>
+	<h4>NOTE</h4>
+<p>There are no LISP functions available for inserting an item in the middle of the <b>list</b> or for removing an item from the <b>list</b>.</p>
+	<h4>Valid Attributes</h4>
+<p><b>: list_box</b> {</p>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/action.html" title="DCL Tile: action">action</a> = "(string)";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/allow_accept.html" title="DCL Tile: allow_accept">allow_accept</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/alignment.html" title="DCL Tile: alignment">alignment</a> = position;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_height.html" title="DCL Tile: fixed_height">fixed_height</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_width.html" title="DCL Tile: fixed_width">fixed_width</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/height.html" title="DCL Tile: height">height</a> = number;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/is_enabled.html" title="DCL Tile: is_enabled">is_enabled</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/is_tab_stop.html" title="DCL Tile: is_tab_stop">is_tab_stop</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/key.html" title="DCL Tile: key">key</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/label.html" title="DCL Tile: label">label</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/list.html" title="DCL Tile: list">list</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/mnemonic.html" title="DCL Tile: mnemonic">mnemonic</a> = "char";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/multiple_select.html" title="DCL Tile: multiple_select">multiple_select</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/tabs.html" title="DCL Tile: tabs">tabs</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/value.html" title="DCL Tile: value">value</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/width.html" title="DCL Tile: width">width</a> = number;</p></b>
+<p>}</p>
+	<h4>EXAMPLE</h4>
+<p><b>: list_box</b> {</p>
+<p><b>action</b> = "(subdir)";</p>
+<p><b>label</b> = "Select a color:";</p>
+<p><b>list</b> = "Red\nGreen\nBlue";</p>
+<p><b>value</b> = "0";</p>
+<p>}</p>
+	<h4>NOTE</h4>
+	<ul>
+		<li>Use the \n (new-line) character within the <a href="qrc:/html/predefined-attributes/list.html" title="DCL Attribute: list">list</a> attribute to separate lines.</li></br>
+		<li>The <a href="qrc:/html/predefined-attributes/label.html" title="DCL Attribute: label">label</a> attribute displays the text above the <b>list</b> box.</li></br>
+		<li>The <a href="qrc:/html/predefined-attributes/value.html" title="DCL Attribute: value">value</a> attribute determines which items on the <b>list</b> are initially selected or highlighted. The attribute consists of a string of integers separated by spaces, as in the following:</li></br>
+	</ul>
+<p><b>value</b> = "0 2 5";</p>
+	<ul>
+		<li>The first item is #0. A null string "" means no items are highlighted. When the <a href="qrc:/html/predefined-attributes/multiple_select.html" title="DCL Attribute: multiple_select">multiple_select</a> attribute is <i>false</i>, the <b>value</b> attribute must contain a single integer.</li></br>
+	</ul>
+	<h4>Related <b>DCL</b> Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/button.html" title="DCL Tile: button">button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/edit_box.html" title="DCL Tile: edit_box">edit_box</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/image_button.html" title="DCL Tile: image_button">image_button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/popup_list.html" title="DCL Tile: popup_list">popup_list</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_button.html" title="DCL Tile: radio_button">radio_button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/slider.html" title="DCL Tile: slider">slider</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/toggle.html" title="DCL Tile: toggle">toggle</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href=".html" title="">multi_edit_box</a></p></b>
+</body>
+</html>

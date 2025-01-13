@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>defun</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(defun [c:] name ([arg1 arg2 ...] / [local-var1 local-var2 ...]) expression)</h2>
+	<hr/>
+<p>Create a <b>LISP</b> function.</p>
+	<hr/>
+<p>When composing a <b>LISP</b> file, it is important to understand that the file itself does not represent a function. Instead, a single <b>LISP</b> file may encompass multiple functions or programs, all of which become accessible upon loading the file.</p>
+<p>The initial statement must define the name of a function using the defun construct. This command serves as the first directive within the program and commences with an opening parenthesis, which is subsequently closed at the conclusion of the program.</p>
+<p>Following the defun function, the name of the function or program is specified. After selecting a name, there are several options</p>
+<p>available:</p>
+	<ul>
+		<li>One option is to leave the parentheses empty, denoted as ( ). This signifies that any variables utilized within the program are global, retaining their values even after the program concludes. For instance, if the variable A is assigned the value of 12, it will remain 12 for any other program within the <b>LISP</b> file:</li></br>
+	</ul>
+<p>(<b>defun</b> newfunc ( )</p>
+<p>...</p>
+<p>)</p>
+	<ul>
+		<li>Alternatively, you may choose to restrict all variables to the local scope of the program. For example, if you assign the value of 15 to the variable N, it will only hold that value during the execution of this specific program. To indicate that a variable is local, place a forward slash (<b>/</b>) before the variable name following the program name:</li></br>
+	</ul>
+<p>(<b>defun</b> newfunc ( / N)</p>
+<p>...</p>
+<p>)</p>
+	<ul>
+		<li>In certain cases, you might wish to pass an argument to the program, allowing a variable to receive a value from outside the currently executing program. Such variables should be positioned before the forward slash:</li></br>
+	</ul>
+<p>(<b>defun</b> newfunc (A / N)</p>
+<p>...</p>
+<p>)</p>
+<p>Once the function is established along with its variables, you have the option to utilize the c: prefix. By adding c: to the function name, you can invoke the command at the <b>LibreCAD</b> command prompt without the need for parentheses. This allows it to function similarly to other <b>LibreCAD</b> commands, such as Line, Arc, and Circle.</p>
+<p>(<b>defun</b> C:newfunc ( A / N)</p>
+<p>...</p>
+<p>)</p>
+	<h4>NOTE</h4>
+<p>It is important to note that the C: prefix is unrelated to the C: drive on your computer; in the context of <b>LISP</b>, it is an abbreviation for "command."</p>
+	<h4>EXAMPLES</h4>
+<p>Code                               Returns:</p>
+<p>(<b>defun</b> newfunc ( ) . . .)          May use global variables.</p>
+<p>(<b>defun</b> newfunc (var1 var2). . . )  Newfunc receives two outside values.</p>
+<p>(<b>defun</b> newfunc (<b>/</b> var1 var2). . .) Newfunc has two local variables.</p>
+	<h4>More about...</h4>
+adsatoms-family	<b><p><a href="qrc:/html/lisp/command.html" title="LISP Function (command cmd [arguments] ...)">(command cmd [arguments] ...)</a></p></b>
+menucmd</body>
+</html>

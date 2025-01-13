@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>command</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(command cmd [arguments] ...)</h2>
+	<hr/>
+<p>Exec this <b>LibreCAD</b> command.</p>
+	<hr/>
+<p>This function allows the utilization of any <b>LibreCAD</b> command within a <b>LISP</b> program. The subsequent arguments will be employed for this purpose. It is essential to assign points to variables following the invocation of the function <a href="qrc:/html/lisp/get.html" title="<b>LISP</b> Function (<b>get</b>)">(<b>get</b>)</a>point.</p>
+<p>Certain commands may extend beyond the specified points. To terminate a command, input a space enclosed in quotes to signify an Enter, thereby concluding the command.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>command</b> "arc" p1 p2 p3)<td/>
+	<td>Using preset variables.<td/>
+	</tr>	<tr>
+	<td>(<b>command</b> "line" p1 p2 p3 " ")<td/>
+	<td>Space to end the command.<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/defun.html" title="LISP Function (defun [c:] name [arg1 arg2 ...] / [local-var1 local-var2 ...] expression)">(defun [c:] name ([arg1 arg2 ...] / [local-var1 local-var2 ...]) expression)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/help.html" title="LISP Function (help "func")">(help "func")</a></p></b>
+menucmd</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>seq</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(seq coll)</h2>
+	<hr/>
+<p>This function returns a seq on the collection.</p>
+	<hr/>
+<p>This function takes a list, vector, string, or nil. If an empty list, empty vector, or empty string ("") is passed in then nil is returned. Otherwise, a list is returned unchanged, a vector is converted into a list, and a string is converted to a list containing the original string split into single character strings. If the collection is empty, returns nil. (<b>seq</b> nil) returns nil.</p>
+	<h4>EXAMPLES</h4>
+<p>Code         Rerurns</p>
+<p>(<b>seq</b> '(1))   (1)</p>
+<p>(<b>seq</b> [1 2])  (1 2)</p>
+<p>(<b>seq</b> "abc")  (\a \b \c)</p>
+<p>;; Corner cases</p>
+<p>(<b>seq</b> nil)    nil</p>
+<p>(<b>seq</b> '())    nil</p>
+<p>(<b>seq</b> [])     nil</p>
+<p>(<b>seq</b> "")     nil</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/list.html" title="LISP Function (list 1 2 3)">(list 1 2 3)</a></p></b>
+</body>
+</html>

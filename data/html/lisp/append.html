@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>append</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(append list1 list2 ...)</h2>
+	<hr/>
+<p>Add everything in this list to an existing list.</p>
+	<hr/>
+<p>This function incorporates list2 into list1. The element of list2 consists of a single item. It is possible to append several lists.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> m '(A B C D E ))<td/>
+	<td>(A B C D E )<td/>
+	</tr>	<tr>
+	<td>(<b>append</b> m '(G))<td/>
+	<td>(A B C D E G)<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> m (<b>append</b> m '(G H I)<td/>
+	<td>(LIST 1 2))) (A B C D E F G H I 1 2)<td/>
+	</tr>	<tr>
+	<td>(<b>append</b>)<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+acad_strlsort	<b><p><a href="qrc:/html/lisp/length.html" title="LISP Function (length list)">(length list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/listp.html" title="LISP Function (listp item)">(listp item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/nth.html" title="LISP Function (nth integer list)">(nth integer list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/reverse.html" title="LISP Function (reverse list)">(reverse list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/substr.html" title="LISP Function (substr string start [length])">(substr string start [length])</a></p></b>
+</body>
+</html>

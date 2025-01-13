@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>get</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(get key)</h2>
+	<hr/>
+<p>Return the value of environment.</p>
+	<hr/>
+<p>This Funktion takes a symbol key and if the current environment contains that key then return the matching value otherwise nil.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>def!</b> point {"x" 1 "y" 1.2 "z" 0})<td/>
+	<td>{"x" 1 "y" 1.200000 "z" 0}<td/>
+	</tr>	<tr>
+	<td>(<b>get</b> point "x")<td/>
+	<td>1<td/>
+	</tr>	<tr>
+	<td>(<b>get</b> point "l")<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/def.html" title="LISP Function (def!)">(def!)</a></p></b>
+</body>
+</html>

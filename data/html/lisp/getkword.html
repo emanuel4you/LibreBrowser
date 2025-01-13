@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>getkword</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(getkword [prompt])</h2>
+	<hr/>
+<p>Request the user to enter a word.</p>
+	<hr/>
+<p>This function operates in conjunction with (equal statement1 statement2 [tolerance])(IDR_166)(<b>initget</b> [bits] [string])(IDR_205) to solicit a response with predefined limited options. For instance, you may wish for the user to respond exclusively with "yes" or "no." Alternatively, you might want to confine the range of numbers that the user can input to between 0 and 15.</p>
+<p>Utilizing this function involves a two-step procedure: (1) initially, employ initget to establish the acceptable response keywords; and (2) subsequently, utilize getkword to request input. <b>LibreCAD</b> presents a dialog box that enumerates the valid responses defined by initget, along with a Cancel option.</p>
+<p>Should the input fail to align with the specified criteria, the function notifies the user that the input is invalid with the message "Try again:" and prompts for another attempt. If the input is empty (indicating the user pressed the Enter key), getkword will return nil unless null input is prohibited.</p>
+<p>In the absence of preset keywords through initget, nil will be returned.</p>
+	<h4>EXAMPLE</h4>
+<p>(<b>initget</b> 2 "Yes No")</p>
+<p>(<b>getkword</b> "Are you sure? ")</p>
+<p>Displays dialog box.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/getstring.html" title="LISP Function (getstring [flag] [prompt])">(getstring [flag] [prompt])</a></p></b>
+</body>
+</html>

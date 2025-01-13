@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>division_operator</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+<p>(<b>/</b> number1 number2 ...)</p>
+	<hr/>
+<p>Divide the initial number by the subsequent numbers.</p>
+	<hr/>
+<p>This function calculates the quotient of the two numbers. When provided with two numbers, divide the first number by the second number. In cases where there are more than two numbers, divide the first number by the product of all subsequent numbers.</p>
+<p>The output will be a real number. This also applies to integers; dividing integers will yield an integer result. However, if there is a mixture of real numbers and integers, the integers will be treated as real numbers, resulting in a real number output.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>/</b> 6.0 12 5)<td/>
+	<td>0.100000<td/>
+	</tr>	<tr>
+	<td>(<b>/</b> 600.0 5)<td/>
+	<td>120.000<td/>
+	</tr>	<tr>
+	<td>(<b>/</b> 6 -3)<td/>
+	<td>-2<td/>
+	</tr>	<tr>
+	<td>(<b>/</b>)<td/>
+	<td>0<td/>
+	</tr>	<tr>
+	<td>(<b>/</b> 0.5)<td/>
+	<td>0.500000<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>A digit must precede a decimal point. For instance, 0.5 is considered valid, whereas .5 triggers the <b>LibreCAD</b> error message, "Error: invalid argument list."</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/multiplication_operator.html" title="LISP Function (* number1 number2 ...)">(* number1 number2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/fix.html" title="LISP Function (fix number)">(fix number)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/float.html" title="LISP Function (float number)">(float number)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/rem.html" title="LISP Function (rem number1 number2 [number3 ...])">(rem number1 number2 [number3 ...])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+</body>
+</html>

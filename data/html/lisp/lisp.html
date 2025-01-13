@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+     		th { text-align: left; }
+	</style>
+	<titel>lisp</titel>
+</head>
+<body>
+	<h2>Programming Overview of the LISP (LISt Processing) Language</h2>
+	<hr/>
+<p><b>LISP</b> (LISt Processing) is a standalone programming language that offers integration capabilities with the <b>LibreCAD</b> program for customization purposes. <b>LibreLisp</b> is based on a <b>clojure</b> lightweight core that brings additional types and functions (vector, map, ...). It has similarities to Auto<b>LISP</b> and significantly extends the commands and functions available in <b>LibreCAD</b>.</p>
+	<hr/>
+	<h4>LISP Functions</h4>
+<p>Each command in <b>LibreLisp</b> is designed to execute a specific function. For instance, <b>LISP</b> functions can:</p>
+	<ul>
+		<li>Load various <b>LISP</b> applications, <b>DCL</b> applications, and <b>LibreCAD</b> files.</li></br>
+		<li>Cross-language development. (<b>LibreLisp</b> can call LibrePython functions/applications just as LibrePython can execute <b>LibreLisp</b>).</li></br>
+		<li>Solicit input from the user or inform them of particular circumstances.</li></br>
+		<li>Import additional LibrePython or <b>LibreCAD</b> Script files.</li></br>
+		<li>Seek user input or alert the user regarding specific conditions.</li></br>
+		<li>Execute standard commands in <b>LibreCAD</b>.</li></br>
+		<li>Run system applications.</li></br>
+		<li>Process alphanumeric sequences.</li></br>
+		<li>Perform mathematical calculations.</li></br>
+		<li>Store data for future use.</li></br>
+		<li>Read from and write to files.</li></br>
+		<li>Select entities within a drawing.</li></br>
+		<li>Alter entities within a drawing.</li></br>
+		<li>Display information on the screen or save it to a file.</li></br>
+	</ul>
+<p>By developing applications that integrate various <b>LISP</b> functions, users can create tailored solutions that enhance the CAD tools in <b>LibreCAD</b>, connect their drawings with other applications, and streamline their workflows. Utilizing <b>LISP</b> alongside <b>LibreCAD</b> allows for the enhancement of CAD workstations through the creation of powerful add-on applications tailored to specific needs relevant to one's specialty, firm, profession, or industry.</p>
+<p>To make developing applications as easy as possible, <b>LibreCAD</b> has an integrated development environment, the <b>LibreLisp</b> Ide, with highlighting of Lisp, Python and Dcl sources, as well as search, debug, run, script load options.</p>
+	<h4>NOTE</h4>
+<p>For further details regarding the compatibility of <b>LibreCAD</b>'s <b>LISP</b> implementation with those found in other CAD systems, please refer to the section on <a href="qrc:/html/lisp/lisp-compatibility.html" title="<b>LISP</b> Compatibility"><b>LISP</b> Compatibility</a>.</p>
+	<h2>LISP Symbols</h2>
+	<h4>Integer Numbers</h4>
+<p>An integer is defined as a number that does not include a decimal point. Examples of integers include 0, 1, -512, and 9597. In <b>LISP</b>, the range of an integer spans from -9223372036854775808 to +9223372036854775807;. If a function causes an integer to exceed this range, it is automatically converted to the opposite sign; for instance, -9223372036854775808 becomes</p>
+<p>9223372036854775807. This can be conceptualized as a wrapping effect, where adding -1 to -9223372036854775808 results in +9223372036854775807, as illustrated in the accompanying diagram.</p>
+	<h4>Real Numbers</h4>
+<p>A real number, often referred to as a "floating point" number, is defined as a number that includes a decimal point. While <b>LISP</b> represents a real number with six significant digits (for instance, 2.00000), these numbers are actually stored in a double-precision floating-point format. This implies that they possess a precision of 15 significant digits, exemplified by the number 2.00000000000000, 64-bit real number and his value range: from - 1.7 × 10 on 308 to +1.7 × 10 on 308 and it has 15 digit precision. if it is used to store integers the biggest integer what can store without rounding is 2 on 53. 64-bit real number is stored the following way: 1bit sign, 8bit exponent a 23bit mantissa. In <b>LISP</b>, the constant pi is predefined as a constant real number with a value of 3.141593. Additionally, <b>LISP</b> offers a variety of functions for the manipulation and conversion of real numbers.</p>
+	<h4>NOTE</h4>
+<p>It is important to note that a decimal point must be preceded by a digit. For instance, 0.5 is acceptable, whereas .5 will trigger a <b>LibreCAD</b> error message stating, "Command: (<b>setq</b> x .5) Error: '.5' not found"</p>
+	<h4>Strings</h4>
+<p>A string is defined as a sequence of alphanumeric characters enclosed in quotation marks, such as "Hallo, <b>LibreCAD</b>" and "Please type your name:". A string that consists solely of "" is referred to as empty.</p>
+<p>To incorporate control codes, also known as escape codes, the backslash ( \ ) character should be used as a prefix. For example, \n denotes the control code for initiating a new line. To include a quotation mark within a string, one should use \", as demonstrated in "The screw is 1\" long." <b>LISP</b> provides numerous functions (all beginning with str, along with many others) for string manipulation..</p>
+	<h4>Entity Names</h4>
+<p>An entity name is a distinct hexadecimal identifier assigned to each entity within the drawing, such as . In <b>LISP</b>, the actual entity is not directly manipulated. Instead, one <b>first</b> identifies its entity name and subsequently works with that name. The term entity is utilized in <b>LISP</b> for historical reasons, although it is synonymous with the term object.</p>
+	<h4>Lists</h4>
+<p>In <b>LISP</b>, the fundamental structure is the list. A list consists of various numbers or text elements that are separated by spaces and enclosed within pare<b>nth</b>eses, exemplified by (1 2 3), (<b>def!</b> x 1.0), and ("Answer is: " 42).</p>
+<p>A pair of numbers typically represents 2D coordinates in the form of (x, y), such as (1.0 2.0). Similarly, a triplet of numbers is often utilized to denote 3D coordinates (x, y, z), for instance, (10.0 11.0 12.0). A unique type of list known as a dotted pair is employed to represent entity data, illustrated by (100 . 1). The structure of dotted pair data bears resemblance to, but is not identical to, DXF codes. For example, (50 . 1) indicates that the entity is assigned the color red, corresponding to group code 62 and color #1. <b>LISP</b> offers numerous functions, all prefixed with "ent," for analyzing entity data.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> pnt '(0.0 100.0)<td/>
+	<td>(0.000000 100.000000)<td/>
+	</tr>	<tr>
+	<td>(<b>first</b> pnt)<td/>
+	<td>0.000000<td/>
+	</tr>	<tr>
+	<td>(<b>nth</b> 1 pnt)<td/>
+	<td>100.000000<td/>
+	</tr>	</table>
+	<h4>Vectors (clojure)</h4>
+<p>In modern <b>LISP</b>, an other fundamental structure is the vector. A vector consists of various numbers or text elements that are separated by spaces and enclosed within pare<b>nth</b>eses, exemplified by [1 2 3], and ["Answer is: " 42].</p>
+<p>A pair of numbers typically represents 2D coordinates in the form of [x, y], such as [1.0 2.0]. Similarly, a triplet of numbers is often utilized to denote 3D coordinates [x, y, z], for instance, [10.0 11.0 12.0].</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> pnt [0.0 100.0])<td/>
+	<td>[0.000000 100.000000]<td/>
+	</tr>	<tr>
+	<td>(<b>first</b> pnt)<td/>
+	<td>0.000000<td/>
+	</tr>	<tr>
+	<td>(<b>nth</b> 1 pnt)<td/>
+	<td>100.000000<td/>
+	</tr>	</table>
+	<h4>Hash Maps (clojure)</h4>
+<p>In modern <b>LISP</b>, an other fundamental structure is the map. Maps are represented as alternating keys and values that are separated by spaces and enclosed within brace { }, exemplified by {:x 1 :y 2 :z 3}, and { :answer "Answer is: " :value 42 }.</p>
+<p>A pair of numbers typically represents 2D coordinates in the form of {:x 0.000000 :y 100.000000}. Similarly, a triplet of numbers is often utilized to denote 3D coordinates {:x 0.000000 :y 100.000000 :z 0.000000}.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> ptn (hash-map :x 0.0 :y 100.0))<td/>
+	<td>{:x 0.000000 :y 100.000000}<td/>
+	</tr>	<tr>
+	<td>(<b>get</b> ptn :x)<td/>
+	<td>0.000000<td/>
+	</tr>	<tr>
+	<td>(<b>get</b> ptn :y)<td/>
+	<td>100.000000<td/>
+	</tr>	</table>
+	<h4>Selection Sets</h4>
+<p>A selection set refers to a collection of one or more entities. <b>LISP</b> includes a variety of functions, all beginning with the prefix ss, for the creation and manipulation of selection sets.</p>
+	<h4>File Descriptors</h4>
+<p>A file descriptor is a hexadecimal identifier assigned to a file upon its opening in <b>LISP</b>, such as . Similar to entity data, the file's name is not referenced directly; instead, operations are conducted using the file descriptor. <b>LISP</b> is capable of opening files for reading, writing, or appending, but it is limited to UTF-8 files (binary files are not supported).</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/lisp-compatibility.html" title="LISP Compatibility">LISP Compatibility</a></p></b>
+	<b><p><a href="qrc:/html/lisp/lisp-functions.html" title="LISP Functions">LISP Functions</a></p></b>
+	<b><p><a href="qrc:/html/dcl-tiles/dcl.html" title="Overview of the DCL (Dialog Control Language)">Overview of the DCL (Dialog Control Language)</a></p></b>
+	<b><p><a href="https://github.com/emanuel4you/LibreCAD-Developer-Examples" title="Code Examples from the LibreCAD Developer Reference">Code Examples from the LibreCAD Developer Reference</a></p></b>
+</body>
+</html>

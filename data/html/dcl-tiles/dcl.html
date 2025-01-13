@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>LibreCAD Developer Help</titel>
+</head>
+<body>
+	<h2><b>DCL</b></h2>
+	<hr/>
+	<h2>Overview of the <b>DCL</b> (<b>Dialog Control Language</b>)</h2>
+	<hr/>
+<p><b>DCL</b> stands for <b>Dialog Control Language</b>, a distinct programming language that can be utilized with <b><b>LibreDcl+</b></b> to design custom dialog boxes. When creating dialog boxes using <b>DCL</b>, you will engage with components known as tiles, cluster tiles (or clusters), and attributes. The subsequent sections will elaborate on each type of component and the fundamental syntax employed to define them.</p>
+	<h4>Tiles</h4>
+<p>A tile represents a dialog box component, which may include a button, list_box, image, or text element. Tiles are generally expressed using the following syntax:</p>
+<p><b>: toggle</b> { }</p>
+<p>It is important to note the colon prefix followed by a space, indicating that you are temporarily <i>red</i>efining the attributes of a tile. A tile name presented without the colon prefix signifies that it has been defined previously (either earlier in the <b>DCL</b> file or in a different <b>DCL</b> file). The braces encompass the tile's attributes, which may include characteristics such as color, associated actions, or labels.</p>
+<p>Tiles are also classified based on their function:</p>
+	<ul>
+		<li>Active tiles (for example, <a href="qrc:/html/dcl-tiles/button.html" title=": <b>DCL</b> Tile: button">: button</a> { ... }, <a href="qrc:/html/dcl-tiles/toggle.html" title=": <b>DCL</b> Tile: toggle">: toggle</a> { ... }) (check box), and <a href="qrc:/html/dcl-tiles/list_box.html" title=": <b>DCL</b> Tile: list_box">: list_box</a> { ... }) define dialog box controls that receive user input and/or carry out commands and actions.</li></br>
+		<li>Text tiles (for example, <a href="qrc:/html/dcl-tiles/text.html" title=": <b>DCL</b> Tile: text">: text</a> { ...}) manipulate strings in a dialog box.</li></br>
+		<li>Error handler tiles (for example, <a href="qrc:/html/dcl-tiles/errtile.html" title="<b>DCL</b> Tile: errtile">errtile</a>; and <a href="qrc:/html/dcl-tiles/ok_cancel_help.html" title="<b>DCL</b> Tile: ok_cancel_help">ok_cancel_help</a>;) take care of displaying error messages to the user and standard confirmation buttons such as OK, Cancel, and Help.</li></br>
+		<li>Decorator tiles (for example, <a href="qrc:/html/dcl-tiles/image.html" title=": <b>DCL</b> Tile: image">: image</a> { ... } and <a href="qrc:/html/dcl-tiles/spacer.html" title=": <b>DCL</b> Tile: spacer">: spacer</a> { ... } handle graphical elements and spacing within a dialog box.</li></br>
+	</ul>
+	<h4>NOTE</h4>
+<p>There is the <a href="qrc:/html/dcl-tiles/register.html" title=": <b>DCL</b> Tile: register">: register</a> {} and the <a href="qrc:/html/dcl-tiles/tab.html" title=": <b>DCL</b> Tile: tab">: tab</a> {} tail for creating tabbed dialog boxes.</p>
+	<h4>Cluster Tiles</h4>
+<p>A cluster is a group of tiles, such as a group of related radio buttons (also called option buttons) or a group of check boxes (also called toggles). Clusters are usually (but not always) surrounded by a rectangular outline. The individual tile elements within a cluster are called the cluster's children.</p>
+<p>Clusters are a form of tile, and typically take the following syntax:</p>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_column.html" title="DCL Tile: : boxed_column">: boxed_column</a> { }</p></b>
+<p>Again, note the colon prefix, followed by a space. The braces contain the cluster's attributes and tiles. Radio buttons have their own clusters since, by definition, there must be at least two radio buttons in a cluster.</p>
+	<h4>Attributes</h4>
+<p>In <b>DCL</b>, the term attribute refers to a characteristic of a tile, such as its color, the action it performs, its label, and so forth. The program's <b>DCL</b> includes a number of <a href="qrc:/html/predefined-attributes/predefined-attributes.html" title="<b>DCL</b>: Predefined Attributes">Predefined Attributes</a> (for example, <a href="qrc:/html/predefined-attributes/color.html" title="<b>DCL</b> Attribute: color">color</a>, <a href="qrc:/html/predefined-attributes/multiple_select.html" title="<b>DCL</b> Attribute: multiple_select">multiple_select</a>).</p>
+<p>A tile can have many attributes or none at all. When a tile has no attributes, it assumes the default values of the attributes.</p>
+<p>A typical attribute takes the following syntax:</p>
+<b><p><a href="qrc:/html/predefined-attributes/label.html" title="DCL Tile: label">label</a> = "Pick a point: ";</p></b>
+	<h4>NOTE</h4>
+<p>The semicolon terminator. Not all attributes apply to all tiles. In fact, some attributes change their meaning, depending on the tile with which they are used.</p>
+<p>Tiles and Attributes Unique to <b><b>LibreDcl+</b></b>'s Implementation of <b>DCL</b></p>
+<p>The program's <b>DCL</b> has one unique tile and several attributes that are not found in other implementations of <b>DCL</b>. The following table describes the tile unique to <b><b>LibreDcl+</b></b>'s implementation of <b>DCL</b>:</p>
+	<h4>Tile Meaning</h4>
+<b><p><a href="qrc:/html/dcl-tiles/button.html" title="DCL Tile: : button">: button</a> { } Creates a button.</p></b>
+	<h4>The <b>DCL</b> File Format</h4>
+<p>A <b>DCL</b> file is in UTF-8 format, so you can use any text editor to write and edit <b>DCL</b> files.</p>
+<p>Syntax for Comments in <b>DCL</b> Code</p>
+<p>Line comments are prefixed with //, as follows:</p>
+<p>// comment line.</p>
+<p>To embed comments in the <b>DCL</b> code, use /* and */, as follows:</p>
+<p>mydlg <b>: dialog</b> { /* name dialog box*/</p>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/predefined-attributes/about-predefined-attributes.html" title="DCL: About Predefined Attributes">About Predefined Attributes</a></p></b>
+<b><p><a href="qrc:/html/predefined-attributes/predefined-attributes.html" title="DCL: Predefined Attributes">Predefined Attributes</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/dcl-tiles.html" title="DCL: Tiles">DCL Tiles</a></p></b>
+<b><p><a href="qrc:/html/python/python-functions.html" title="DCL: PYTHON Functions">PYTHON Funktions</a></p></b>
+	<br/>
+</body>
+</html>

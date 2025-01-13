@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>fill_image</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(fill_image x y width height color)</h2>
+	<hr/>
+<p>Fill a dialog box's rectangle with color.</p>
+	<hr/>
+<p>This function creates a rectangle (<b>or</b> square) and subsequently fills it using the <a href="qrc:/html/lisp/end_image.html" title="<b>LISP</b> Function (<b>end_image</b>)">(<b>end_image</b>)</a> functions.</p>
+<p>The x and y parameters define the coordinates of the upper-left corner of the rectangle. The width and height parameters represent the distance to the lower-right corner; both of these parameters must be positive values.</p>
+<p>If the lower-right coordinates were derived from the dimx_tile and dimy_tile functions, it is important to note that the origin (0,0) corresponds to the upper-left corner.</p>
+<p>The color parameter can be specified as either a <b>LibreCAD</b> color number or a logical color number:</p>
+<p>Color number                     Description</p>
+<p>-2           Current background of the <b>LibreCAD</b> graphics screen.</p>
+<p>-15          Current dialog box background color.</p>
+<p>-16          Current dialog box foreground color.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>nil)<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/slide_image.html" title="LISP Function (slide_image x y width height slide)">(slide_image x y width height slide)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/vector_image.html" title="LISP Function (vector_image x1 y1 x2 y2 color)">(vector_image x1 y1 x2 y2 color)</a></p></b>
+</body>
+</html>

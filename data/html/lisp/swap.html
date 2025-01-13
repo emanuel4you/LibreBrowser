@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>swap</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(swap! atom f) (swap! atom f x) (swap! atom f x y) (swap! atom f x y & args)</h2>
+	<hr/>
+<p>Atomically swaps the value of atom</p>
+	<hr/>
+<p>Atomically swaps the value of atom to be: (<b>apply</b> f current-value-of-atom args). Note that f may be called multiple times, and thus should be free of side effects. Returns the value that was swapped in.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>def!</b> m1 (<b>atom</b> {:a "A" :b "B"}))<td/>
+	<td>(<b>atom</b> {:a "A" :b "B"})<td/>
+	</tr>	<tr>
+	<td>(<b>swap!</b> m1 assoc :a "Aaay")<td/>
+	<td>{:a "Aaay" :b "B"}<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/defun.html" title="LISP Function (defun [c:] name [arg1 arg2 ...] / [local-var1 local-var2 ...] expression)">(defun [c:] name ([arg1 arg2 ...] / [local-var1 local-var2 ...]) expression)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/help.html" title="LISP Function (help "func")">(help "func")</a></p></b>
+</body>
+</html>

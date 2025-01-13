@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>subst</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(subst new old list)</h2>
+	<hr/>
+<p>Replace a specified element with another within a list.</p>
+	<hr/>
+<p>This function operates similarly to the search-and-replace feature found in word processing software. However, the distinction lies in the fact that the subst function is designed to work with lists rather than strings.</p>
+<p>The subst function substitutes every instance of the old element with the new element within the list.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>subst</b> '"a" '"b" '("a" "b" "c"))<td/>
+	<td>(a a c)<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/length.html" title="LISP Function (length list)">(length list)</a></p></b>
+member</body>
+</html>

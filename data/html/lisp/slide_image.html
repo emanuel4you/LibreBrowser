@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>slide_image</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(slide_image x y width height slide)</h2>
+	<hr/>
+<p>Display a slide in the dialog box.</p>
+	<hr/>
+<p>This function presents an image within a dialog box.</p>
+<p>The image is placed at specified x,y coordinates, which correspond to the upper-left corner of the image. The width parameter defines the image's width extending in the positive x-direction, while the height parameter indicates the image's height extending in the negative y-direction.</p>
+<p>The slide parameter refers to the name of the snapshot file SLD (slide) format. <b>LibreCAD</b> looks for slides in the lib.slb file found within the designated search path.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>slide_image</b> 10 10 15 20 "LibreCad(ANSI36)")<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>Use the MSlide command to create an image. For good reproduction,</p>
+<p>that you plan to display the image in the dialog box.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/dimx_tile.html" title="LISP Function (dimx_tile key)">(dimx_tile key)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/dimy_tile.html" title="LISP Function (dimy_tile key)">(dimy_tile key)</a></p></b>
+</body>
+</html>

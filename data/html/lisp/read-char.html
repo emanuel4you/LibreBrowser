@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>read-char</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(read-char [file-descriptor])</h2>
+	<hr/>
+<p>Read a single character.</p>
+	<hr/>
+<p>This function is designed to read a single character from either a file or the keyboard. When the read-char function is invoked with a file, it retrieves the character from that file. In the absence of a file descriptor, it defaults to reading from the keyboard.</p>
+<p>The read-char function doesn't actually return the letter, rather it</p>
+<p>returns the ASCII code of that letter. To actually see the letter, you</p>
+<p>must convert the ASCII code using the <a href="qrc:/html/lisp/chr.html" title="<b>LISP</b> Function (<b>chr</b>)">(<b>chr</b>)</a> function.</p>
+	<h4>EXAMPLES</h4>
+<p>For the following example, assume the file sample.lsp exists, and the</p>
+<p>first line is "C:\Sample\First.txt".</p>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> file (<b>open</b> "sample.lsp" "r")))<td/>
+	<td>(<b>setq</b> file (<b>open</b> "sample.lsp" "r"))<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> a (<b>chr</b> c))<td/>
+	<td>"C"<td/>
+	</tr>	<tr>
+	<td>(<b>read-char</b>))<td/>
+	<td>(<b>read-char</b>)<td/>
+	</tr>	<tr>
+	<td>[press A] Waits for you to press a key.)<td/>
+	<td>[press A] Waits for you to press a key.<td/>
+	</tr>	<tr>
+	<td>65)<td/>
+	<td>65<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/read-line.html" title="LISP Function (read-line [file-descriptor])">(read-line [file-descriptor])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/write-char.html" title="LISP Function (write-char character [file-descriptor])">(write-char character [file-descriptor])</a></p></b>
+</body>
+</html>

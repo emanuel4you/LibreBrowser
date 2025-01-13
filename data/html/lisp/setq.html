@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>setq</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(setq symbol1 statement1 [symbol2 statement2] ...)</h2>
+	<hr/>
+<p>Assign the symbol to the statement.</p>
+	<hr/>
+<p>This function is the most frequently utilized assignment function in <b>LISP</b>. It assigns statement1 to symbol1. For instance:</p>
+<p>(<b>setq</b> x 42)</p>
+<p>This command assigns the value of 42 to the symbol x.</p>
+	<h4>NOTE</h4>
+<p>It does not perform an assignment. Symbol1 is the variable that receives the value, while statement1 represents the value being assigned to symbol1. Statement1 may be a variable that denotes a value, a numeric value, or a string.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> y 10)<td/>
+	<td>10<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> x y)<td/>
+	<td>10<td/>
+	</tr>	<tr>
+	<td>Sets the variable x to the value of y-previously we set y to 10.)<td/>
+	<td>Sets the variable x to the value of y-previously we set y to 10.<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> myvar "Mom")<td/>
+	<td>"Mom"<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> pt1 '(5 3))<td/>
+	<td>(5 3)<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>The setq function allows for the assignment of multiple variables simultaneously. The [symbol2 stmt2]... portion is optional. When multiple variables are assigned, the value returned is that of the last variable assigned.</p>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> a 5 b 6)<td/>
+	<td>6<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> x 1.0y 2.0 z 3.0)<td/>
+	<td>3.0<td/>
+	</tr>	<tr>
+	<td>To view the value of any variable, prefix the variable name with an exclamation mark (!).)<td/>
+	<td>To view the value of any variable, prefix the variable name with an exclamation mark (!).<td/>
+	</tr>	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>!a   5)<td/>
+	<td>!a   5<td/>
+	</tr>	<tr>
+	<td>!b   6)<td/>
+	<td>!b   6<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/defun.html" title="LISP Function (defun [c:] name [arg1 arg2 ...] / [local-var1 local-var2 ...])">(defun [c:] name ([arg1 arg2 ...] / [local-var1 local-var2 ...])</a></p></b>
+<p>expression)</p>
+	<b><p><a href="qrc:/html/lisp/lambda.html" title="LISP Function (lambda arguments expression ...)">(lambda arguments expression ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/quote.html" title="LISP Function (quote statement)">(quote statement)</a></p></b>
+</body>
+</html>

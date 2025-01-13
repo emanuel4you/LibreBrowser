@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>close</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(close file-descriptor)</h2>
+	<hr/>
+<p>Close an open file.</p>
+	<hr/>
+<p>This function terminates access to a file that was previously opened. While <b>LibreCAD</b> automatically closes files upon exiting, it is advisable to utilize the close function for proper file management.</p>
+<p>The file-descriptor argument refers to the file descriptor that was allocated when the file was opened with the open function. Although the file descriptor persists after the file is closed, it is no longer valid.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>close</b> fil)<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>The file-descriptor must be assigned to a symbol using <a href="qrc:/html/lisp/set.html" title="<b>LISP</b> Function (<b>set</b>)">(<b>set</b>)</a>q, and this symbol should be employed with the close function as the file-descriptor.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/print.html" title="LISP Function (print [expression [file-descriptor]])">(print [expression [file-descriptor]])</a></p></b>
+</body>
+</html>

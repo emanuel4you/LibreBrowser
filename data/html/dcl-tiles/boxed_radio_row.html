@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>boxed_radio_row</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Tiles</h2>
+	<h2><b>: boxed_radio_row</b></h2>
+	<hr/>
+<p>A rectangle can be drawn around a series of radio buttons, with the option to include a title.</p>
+<p><b>DCL</b> Cluster Tile</p>
+	<hr/>
+<p>This cluster tile creates a border surrounding a series of radio buttons. If the <a href="qrc:/html/predefined-attributes/label.html" title="<b>DCL</b> Attribute: label">label</a> attribute is absent or a null string ("") is provided, the border will be displayed without a title.</p>
+	<h4>NOTE</h4>
+	<ul>
+		<li>For a series of radio buttons that do not require a border or title, utilize the <a href="qrc:/html/dcl-tiles/radio_row.html" title="DCL Tile: radio_row">radio_row</a> cluster.</li></br>
+		<li>To encase a row of other types of tiles (not radio buttons) within a border, employ the <a href="qrc:/html/dcl-tiles/boxed_row.html" title="DCL Tile: boxed_row">boxed_row</a> cluster.</li></br>
+		<li>The [link]<b>value</b> attribute specifies which radio button is selected by default, indicated by the <b>value</b> of "1":</li></br>
+	</ul>
+<p><b>value</b> = "1".</p>
+	<h4>Valid Attributes</h4>
+<p><b>: boxed_radio_row</b> {</p>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/alignment.html" title="DCL Tile: alignment">alignment</a> = position;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/children_alignment.html" title="DCL Tile: children_alignment">children_alignment</a> = position;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/children_fixed_height.html" title="DCL Tile: children_fixed_height">children_fixed_height</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/children_fixed_width.html" title="DCL Tile: children_fixed_width">children_fixed_width</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_height.html" title="DCL Tile: fixed_height">fixed_height</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_width.html" title="DCL Tile: fixed_width">fixed_width</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/height.html" title="DCL Tile: height">height</a> = number;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/label.html" title="DCL Tile: label">label</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/value.html" title="DCL Tile: value">value</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/width.html" title="DCL Tile: width">width</a> = number;</p></b>
+<p>}</p>
+	<h4>EXAMPLE</h4>
+<p><b>: boxed_radio_row</b> {</p>
+<p>label="Edit Corner"</p>
+<p><b>: radio_button</b> {</p>
+<p><b>action</b> = "(chamferlsp)";</p>
+<p><b>key</b> = "R5";</p>
+<p><b>label</b> = "Chamfer";</p>
+<p>}</p>
+<p><b>: radio_button</b> {</p>
+<p><b>action</b> = "(filletlsp)";</p>
+<p><b>key</b> = "R6";</p>
+<p><b>label</b> = "Fillet";</p>
+<p>}</p>
+<p>}</p>
+	<h4>Related <b>DCL</b> Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/dialog.html" title="DCL Tile: dialog">dialog</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/column.html" title="DCL Tile: column">column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/row.html" title="DCL Tile: row">row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_column.html" title="DCL Tile: boxed_column">boxed_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_row.html" title="DCL Tile: boxed_row">boxed_row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_radio_column.html" title="DCL Tile: boxed_radio_column">boxed_radio_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_column.html" title="DCL Tile: radio_column">radio_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_row.html" title="DCL Tile: radio_row">radio_row</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_row.html" title="DCL Tile: boxed_row">boxed_row</a></p></b>
+</body>
+</html>

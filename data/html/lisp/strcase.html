@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>strcase</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(strcase string [flag])</h2>
+	<hr/>
+<p>Convert a string to all upper- or all lower-case.</p>
+	<hr/>
+<p>This function transforms the text within a string to either all upper-case or all lower-case, depending on the flag provided.</p>
+<p>The specific case conversion is determined by the flag argument. If the flag is omitted or set to nil, all characters will be converted to upper-case. Conversely, if the flag is not nil (with T commonly used), all alphabetic characters will be converted to lower-case.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>strcase</b> "Yes")<td/>
+	<td>YES<td/>
+	</tr>	<tr>
+	<td>(<b>strcase</b> "NO" T)<td/>
+	<td>"no"<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> var (<b>strcase</b> var))<td/>
+	<td>Permanently changes variable.<td/>
+	</tr>	<tr>
+	<td>(<b>if</b> (<b>=</b> (<b>strcase</b> var)<td/>
+	<td>"YES") (...) Temporarily checks variable.<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p><b>LISP</b> functions that assess and compare text are generally case-sensitive. For instance, (<b>if</b> (<b>=</b> "Y" ans) ...) will only succeed with an uppercase "Y"; a lowercase "y" will not match. Therefore, it is beneficial to utilize the strcase function on the user's input, as demonstrated:</p>
+<p>(<b>setq</b> ans (getchar))</p>
+<p>(<b>setq</b> ans (<b>strcase</b> ans))</p>
+<p>(<b>if</b> (<b>=</b> "Y" ans)</p>
+<p>...</p>
+<p>)</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/atof.html" title="LISP Function (atof string)">(atof string)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/atoi.html" title="LISP Function (atoi string)">(atoi string)</a></p></b>
+</body>
+</html>

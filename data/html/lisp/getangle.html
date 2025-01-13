@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>getangle</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(getangle [point] [prompt])</h2>
+	<hr/>
+<p>Request the user to specify an angle.</p>
+	<hr/>
+<p>This function requests the user to input an angle in the format of the current angle units, which is subsequently returned in radians. If a two-dimensional point is provided, the getangle function calculates the angle between the current zero direction, as defined by the ANGBASE variable, and the guiding line; the angle is measured in a counterclockwise direction.</p>
+<p>In converting the provided angle to radians, the getangle function disregards the ANGDIR variable and measures counterclockwise, with zero radians corresponding to the current ANGBASE setting.</p>
+<p>A prompt can be provided to solicit either a point or an angle from the user.</p>
+<p>The user is not permitted to enter an alternative <b>LISP</b> expression in response to the getangle function.</p>
+	<h4>EXAMPLES</h4>
+<p>(<b>getangle</b>)</p>
+<p>[pick point] Second point:</p>
+<p>(<b>getangle</b> "Rotation angle: ")</p>
+<p>[pick point] Rotation angle:</p>
+<p>0.25553</p>
+<p>(<b>getangle</b> '(5.0 2.0))</p>
+<p>[pick point] no response</p>
+<p>(<b>getangle</b> '(1.0 3.5) "Rotation angle: ")</p>
+<p>[pick point] Rotation angle:</p>
+	<ol>
+		<li>3221</li></br>
+	</ol>
+	<h4>NOTE</h4>
+<p>The getangle function measures the angle from the zero angle as established by the Units command. To measure the angle from the absolute reference, additional considerations are required.</p>
+	<h4>More about...</h4>
+angle	<b><p><a href="qrc:/html/lisp/getdist.html" title="LISP Function (getdist [point] [prompt])">(getdist [point] [prompt])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/getpoint.html" title="LISP Function (getpoint [point] [prompt])">(getpoint [point] [prompt])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/polar.html" title="LISP Function (polar point angle distance)">(polar point angle distance)</a></p></b>
+</body>
+</html>

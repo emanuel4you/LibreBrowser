@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>boundp</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(boundp item)</h2>
+	<hr/>
+<p>Assess whether an item possesses an associated value.</p>
+	<hr/>
+<p>The boundp function ascertains if an item has a value linked to it. If the item indeed has a value associated with it, <b>LISP</b> returns T. Conversely, if the item lacks a value or is bound to nil, a nil is returned.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>boundp</b> 'x)<td/>
+	<td>nil<td/>
+	</tr>	<tr>
+	<td>(<b>boundp</b> 'y)<td/>
+	<td>T<td/>
+	</tr>	<tr>
+	<td>(<b>boundp</b> 'z)<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/atom.html" title="LISP Function (atom item)">(atom item)</a></p></b>
+atoms-family	<b><p><a href="qrc:/html/lisp/numberp.html" title="LISP Function (numberp item)">(numberp item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/type.html" title="LISP Function (type item)">(type item)</a></p></b>
+</body>
+</html>

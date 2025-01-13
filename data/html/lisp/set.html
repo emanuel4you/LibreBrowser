@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>set</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(set 'symbol statement)</h2>
+	<hr/>
+<p>Assign the statement to the symbol.</p>
+	<hr/>
+<p>The function 'set' assigns the statement argument to the specified symbol. It is essential that the symbol is enclosed in quotes. If the symbol is not quoted, it will alter the values of symbols that have been assigned previously.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>set</b> 'x 56)<td/>
+	<td>56<td/>
+	</tr>	<tr>
+	<td>(<b>set</b> 'y "Hello")<td/>
+	<td>"Hello"<td/>
+	</tr>	<tr>
+	<td>(<b>set</b> 'z '(a b c d))<td/>
+	<td>(A B C D)<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>The distinction between the 'set' function and the 'setq' function lies in the fact that 'set' evaluates the symbol. The following expressions are equivalent:</p>
+<p>(<b>set</b> 'i "Me")</p>
+<p>(<b>setq</b> i "Me")</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/quote.html" title="LISP Function (quote statement)">(quote statement)</a></p></b>
+</body>
+</html>

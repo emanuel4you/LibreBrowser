@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>prin1</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(prin1 [expression [file-descriptor]])</h2>
+	<hr/>
+<p>Print it exactly the way it looks.</p>
+	<hr/>
+<p>This function outputs data either to the screen or to a file. If a file descriptor is specified, <b>LISP</b> directs the output to that file; if the file descriptor is absent, <b>LISP</b> sends the output to the <b>LibreCAD</b> Prompt History window.</p>
+<p>When outputting to a file, it is necessary for the file to have been created beforehand.</p>
+<p>The argument expression denotes the content to be printed. This can encompass any expression, not limited to strings. Only the expression itself is printed, without any additional new line or space.</p>
+<p>The prin1 function can be invoked without arguments to yield a null string, resulting in an empty file being printed.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> v1 222))<td/>
+	<td>(<b>setq</b> v1 222)<td/>
+	</tr>	<tr>
+	<td>(<b>prin1</b> v1)<td/>
+	<td>222                 222<td/>
+	</tr>	<tr>
+	<td>(<b>prin1</b> 'v1)<td/>
+	<td>V1                  V1<td/>
+	</tr>	<tr>
+	<td>(<b>prin1</b> "Thank You")<td/>
+	<td>"Thank you"         "Thank you"<td/>
+	</tr>	<tr>
+	<td>(<b>prin1</b> "Sample" f)<td/>
+	<td>"Sample"(to file f) "Sample"<td/>
+	</tr>	<tr>
+	<td>(<b>prin1</b> "\nName:")<td/>
+	<td>"\nName:"           "\nName:"<td/>
+	</tr>	</table>
+	<h4>NOTES</h4>
+	<ul>
+		<li>To prevent the display of nil upon the completion of a <b>LISP</b> routine, utilize the prin1 function at the end:</li></br>
+	</ul>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/prompt.html" title="LISP Function (prompt string)">(prompt string)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/terpri.html" title="LISP Function (terpri)">(terpri)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/write-line.html" title="LISP Function (write-line string [file-descriptor])">(write-line string [file-descriptor])</a></p></b>
+</body>
+</html>

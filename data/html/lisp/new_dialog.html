@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>new_dialog</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(new_dialog dialog dcl-id [function point])</h2>
+	<hr/>
+<p>Display a dialog box.</p>
+	<hr/>
+<p>To present a dialog box, utilize the following function. The dialog box is recognized by its designated name and the corresponding <b>DCL</b> file indicated by the handle.</p>
+<p>The new_dialog function may optionally invoke the <b>LISP</b> routine specified by the function argument. To disregard this argument, use " "; this is necessary when you wish to define the point coordinates without executing a function.</p>
+<p>The optional point parameter indicates the x,y coordinates of the upper-left corner of the dialog box. If the point contains negative coordinates, such as '(-1 -1), the dialog box will be positioned at the default location, typically the center of the <b>LibreCAD</b> window.</p>
+<p>Upon successful execution of the new_dialog function, it returns T; if unsuccessful, it returns nil.</p>
+	<h4>EXAMPLE</h4>
+<p>Code</p>
+<p>((<b>setq</b> dcl_id (<b>load_dialog</b> "dcl_filename.dcl"))</p>
+<p>(<b>if</b> (<b>not</b> (<b>new_dialog</b> "Dialog_Name" dcl_id) ) (<b>alert</b> "Cannot create</p>
+<p>dialog"))</p>
+	<h4>NOTE</h4>
+<p>The sequence for invoking a dialog box is as follows:</p>
+	<ol>
+		<li>l[link]oad_dialog</li></br>
+		<li>new_dialog</li></br>
+		<li><a href="qrc:/html/lisp/action_tile.html" title="LISP Function (action_tile)">(action_tile)</a>, <a href="qrc:/html/lisp/start_image.html" title="LISP Function (start_image)">(start_image)</a>, <a href="qrc:/html/lisp/start_list.html" title="LISP Function (start_list)">(start_list)</a>, etc. (this includes all necessary dialog box initialization, such as linking actions to tiles, creating images, and preparing lists for list boxes).</li></br>
+	</ol>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/unload_dialog.html" title="LISP Function (unload_dialog dcl_id)">(unload_dialog dcl_id)</a></p></b>
+</body>
+</html>

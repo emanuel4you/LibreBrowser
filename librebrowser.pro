@@ -32,12 +32,11 @@ FORMS += \
     downloadmanagerwidget.ui \
     downloadwidget.ui
 
+RESOURCES += \
+    data/html.qrc \
+    data/data.qrc
+
 # install
 target.path = $$[QT_INSTALL_EXAMPLES]/webenginewidgets/librebrowser
-INSTALLS += target
-
-RESOURCES += \
-    data.qrc
-
-DISTFILES +=
+INSTALLS += targe
 

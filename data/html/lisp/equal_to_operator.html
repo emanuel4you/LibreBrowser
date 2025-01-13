@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>equal_to_operator</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+<p>(<b>=</b> item1 item2 ...)</p>
+	<hr/>
+<p>Return T if they're equal.</p>
+	<hr/>
+<p>This function determines the equality of two or more items:</p>
+	<ul>
+		<li>If the items are equal, the output will be true.</li></br>
+		<li>If they are not equal, the function will return false.</li></br>
+	</ul>
+<p>If the function contains more than two items, this function returns true when each item to the right is equal to the item on its left. The items can be numbers or strings.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>=</b> 10 10.0)<td/>
+	<td>true<td/>
+	</tr>	<tr>
+	<td>(<b>=</b> "x" "y")<td/>
+	<td>false<td/>
+	</tr>	<tr>
+	<td>(<b>=</b> "dog" "dog")<td/>
+	<td>true<td/>
+	</tr>	</table>
+	<h4>NOTES</h4>
+	<ul>
+		<li>It is important to distinguish between the = function and the equal function. The key difference lies in their operations: the = function is utilized for comparing numbers and strings, whereas the equal function is designed for comparing lists.</li></br>
+		<li>Both the = and equal functions facilitate comparisons; however, neither of them executes the "equals" operation typically associated with arithmetic, such as the expression 1 + 2 = 3.</li></br>
+	</ul>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/not_equal_to_operator.html" title="LISP Function (/= item1 item2 ...)">(/= item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/less_than_operator.html" title="LISP Function (< item1 item2 ...)">(< item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/less_than_or_equal_to_operator.html" title="LISP Function (<= item1 item2 ...)">(<= item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/greater_than_operator.html" title="LISP Function (> item1 item2 ...)">(> item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/greater_than_or_equal_to_operator.html" title="LISP Function (>= item1 item2 ...)">(>= item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/cond.html" title="LISP Function (cond statement1 result1 ... ...)">(cond (statement1 result1 ...) ...)</a></p></b>
+eq	<b><p><a href="qrc:/html/lisp/if.html" title="LISP Function (if test statement1 [statement2])">(if test statement1 [statement2])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/while.html" title="LISP Function (while text statement )">(while text statement )</a></p></b>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>conj</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(conj coll x), (conj coll x & xs)</h2>
+	<hr/>
+<p>Returns a new collection with the xs 'added'.</p>
+	<hr/>
+<p>This function takes a collection and one or more elements as arguments and returns a new collection which includes the original collection and the new elements. If the collection is a list, a new list is returned with the elements inserted at the start of the given list in opposite order; if the collection is a vector, a new vector is returned with the elements added to the end of the given vector.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>conj</b> nil item)<td/>
+	<td>(item)<td/>
+	</tr>	<tr>
+	<td>(<b>conj</b> coll)<td/>
+	<td>coll<td/>
+	</tr>	<tr>
+	<td>(<b>conj</b>)<td/>
+	<td>[]<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/concat.html" title="LISP Function (concat)">(concat)</a></p></b>
+</body>
+</html>

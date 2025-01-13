@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>cond</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(cond (statement1 result1 ...) ...)</h2>
+	<hr/>
+<p>If the condition is verified as true, proceed accordingly.</p>
+	<hr/>
+<p>This function serves as a frequently utilized conditional statement in <b>LISP</b>. When statement1 evaluates to true, all subsequent functions within that block are executed, and the outcome of the final function is returned.</p>
+	<ul>
+		<li>Should statement1 evaluate to nil, <b>LISP</b> advances to statement2. If this statement is true, the same execution process is followed.</li></br>
+		<li>If the evaluation is false (<b>or</b> nil), <b>LISP</b> continues to seek a true statement.</li></br>
+		<li>In the absence of any true statements, a nil value is returned.</li></br>
+		<li>If there are no functions yielding results within the block, the outcome of the condition itself is returned.</li></br>
+	</ul>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>cond</b> ((<b>zerop</b> x)<td/>
+	<td>0) (T nil))<td/>
+	</tr>	<tr>
+	<td>The evaluation determines if it is not nil. If it is not, the function returns zero (0). If it is nil, the process moves to the second test, (T nil), which is inherently true (T)<td/>
+	<td>and would yield a nil result. Refer to the following set of actual examples illustrating the aforementioned condition.<td/>
+	</tr>	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> x 0)<td/>
+	<td>0<td/>
+	</tr>	<tr>
+	<td>In the subsequent example, if the variable d is assigned a value of 5, <b>LISP</b> will return the string "Equal to." Conversely, if d is set to 6, it will return "Greater than.")<td/>
+	<td>In the subsequent example, if the variable d is assigned a value of 5, <b>LISP</b> will return the string "Equal to." Conversely, if d is set to 6, it will return "Greater than."<td/>
+	</tr>	<tr>
+	<td>Code)<td/>
+	<td>Code<td/>
+	</tr>	<tr>
+	<td>(<b>cond</b> ((<b><</b> d 5)<td/>
+	<td>"Less than")<td/>
+	</tr>	<tr>
+	<td>((<b>=</b> d 5)<td/>
+	<td>"Equal to")<td/>
+	</tr>	<tr>
+	<td>((<b>></b> d 5)<td/>
+	<td>"Greater than")<td/>
+	</tr>	<tr>
+	<td>))<td/>
+	<td>)<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/if.html" title="LISP Function (if test statement1 [statement2])">(if test statement1 [statement2])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/repeat.html" title="LISP Function (repeat number statement1 [statement2 ...])">(repeat number statement1 [statement2 ...])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/while.html" title="LISP Function (while text statement )">(while text statement )</a></p></b>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>getorient</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(getorient [pt] [prompt])</h2>
+	<hr/>
+<p>Request the user to indicate a specific angle.</p>
+	<hr/>
+<p>The output provided by the getorient function is not influenced by the variables ANGDIR and ANGBASE. The reference point is consistently positioned at the zero-radian direction, which is oriented to the right (<b>or</b> east). Angles are measured in a counterclockwise manner. The angles produced by getorient are expressed in radians.</p>
+<p>This function is more suitable for determining absolute angles (orientation) rather than relative angles (amount of rotation).</p>
+<p>It is not permissible to use another <b>LISP</b> expression as a response to a getorient inquiry.</p>
+	<h4>EXAMPLES</h4>
+<p>(<b>getorient</b>)</p>
+<p>[pick first point]</p>
+<p>[pick second point] no response</p>
+<p>Second point:</p>
+<p>(<b>getorient</b> '(3.5 2.0))</p>
+<p>[pick point] no response</p>
+<p>(<b>getorient</b> "Real Angle: ")</p>
+<p>[pick first point]</p>
+<p>[pick second point] Real Angle:</p>
+<p>Second point:</p>
+<p>0.3222</p>
+<p>[pick point] Real Angle:</p>
+	<h4>More about...</h4>
+angle	<b><p><a href="qrc:/html/lisp/getangle.html" title="LISP Function (getangle [point] [prompt])">(getangle [point] [prompt])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/getdist.html" title="LISP Function (getdist [point] [prompt])">(getdist [point] [prompt])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/polar.html" title="LISP Function (polar point angle distance)">(polar point angle distance)</a></p></b>
+</body>
+</html>

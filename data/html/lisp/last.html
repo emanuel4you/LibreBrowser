@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>last</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(last list)</h2>
+	<hr/>
+<p>Identify the final item in that list.</p>
+	<hr/>
+<p>This function retrieves the last element from a list. The element is returned as a singular item unless the last element itself is a list, as illustrated in the examples below.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>last</b> '("first" "second" ("third" "fourth")))<td/>
+	<td>("third" "fourth")<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>Caution is advised when using this function. For instance, if you require a function to obtain the z-coordinate of a point, there may be instances where the point only includes the x- and y-coordinates. In such cases, your function might inadvertently return the y-coordinate. Therefore, it is often preferable to employ a combination of methods.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/length.html" title="LISP Function (length list)">(length list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/nth.html" title="LISP Function (nth integer list)">(nth integer list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/reverse.html" title="LISP Function (reverse list)">(reverse list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+</body>
+</html>

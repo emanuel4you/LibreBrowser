@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>startapp</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(startapp appname [filename])</h2>
+	<hr/>
+<p>Launch a application.</p>
+	<hr/>
+<p>This function initiates any specified application identified by appname. Additionally, it may load a filename into the application if desired. Upon successful execution, the startapp function yields an integer value greater than 2; conversely, if it fails, it returns the negativ value.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>startapp</b> "junk")<td/>
+	<td>2<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/help.html" title="LISP Function (help "func")">(help "func")</a></p></b>
+	<b><p><a href="qrc:/html/lisp/load.html" title="LISP Function (load filename [flag])">(load filename [flag])</a></p></b>
+xload</body>
+</html>

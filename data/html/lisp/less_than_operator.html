@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>less_than_operator</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+<p>(<b><</b> item1 item2 ...)</p>
+	<hr/>
+<p>The initial item is smaller than the subsequent ones.</p>
+	<hr/>
+<p>The less-than function yields a T (true) or a nil (false) result:</p>
+	<ul>
+		<li>If item1 is smaller than item2 (<b>and</b> so forth), the function will return a T.</li></br>
+		<li>Conversely, if item2 is greater than or equal to the first item, the function will return nil.</li></br>
+	</ul>
+<p>In cases where the function evaluates more than two items, it will return T if every item to the right is smaller than the item to its left. The items may consist of either numbers or strings.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b><</b> 9 11)<td/>
+	<td>T<td/>
+	</tr>	<tr>
+	<td>(<b><</b> 25 20)<td/>
+	<td>nil<td/>
+	</tr>	<tr>
+	<td>(<b><</b> 2)<td/>
+	<td>T<td/>
+	</tr>	<tr>
+	<td>(<b><</b> -2)<td/>
+	<td>T<td/>
+	</tr>	<tr>
+	<td>(<b><</b> "x" "x")<td/>
+	<td>nil<td/>
+	</tr>	<tr>
+	<td>(<b><</b> "x" "y" "z")<td/>
+	<td>T<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>To operator function.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/less_than_or_equal_to_operator.html" title="LISP Function (<= item1 item2 ...)">(<= item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/equal_to_operator.html" title="LISP Function (= item1 item2 ...)">(= item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/greater_than_operator.html" title="LISP Function (> item1 item2 ...)">(> item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/greater_than_or_equal_to_operator.html" title="LISP Function (>= item1 item2 ...)">(>= item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/cond.html" title="LISP Function (cond statement1 result1 ... ...)">(cond (statement1 result1 ...) ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/if.html" title="LISP Function (if test statement1 [statement2])">(if test statement1 [statement2])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/while.html" title="LISP Function (while text statement )">(while text statement )</a></p></b>
+</body>
+</html>

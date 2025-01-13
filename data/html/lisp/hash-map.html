@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>hash-map</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(hash-map) (hash-map & keyvals)</h2>
+	<hr/>
+<p>Returns a new hash map with supplied mappings.</p>
+	<hr/>
+<p>This Function takes a variable but even number of arguments and returns a new mal hash-map value with keys from the odd arguments and values from the even arguments respectively. This is basically the functional form of the {} reader literal syntax.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>hash-map</b>)<td/>
+	<td>{}<td/>
+	</tr>	<tr>
+	<td>(<b>hash-map</b> :key1 1, :key1 2)<td/>
+	<td>{:key1 2}<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/def.html" title="LISP Function (def!)">(def!)</a></p></b>
+</body>
+</html>

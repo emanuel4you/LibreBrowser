@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>read-line</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(read-line [file-descriptor])</h2>
+	<hr/>
+<p>Read whole line.</p>
+	<hr/>
+<p>It is typically more practical and efficient to utilize. Any content can be retrieved from a file, as the format is a string. The file is designated by a specific function.</p>
+	<h4>EXAMPLE</h4>
+<p>For instance, consider the following example: if the file sample.lsp is present, the first line contains "C:\Sample\First.txt," and the second line reads "Second Line."</p>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> file (<b>open</b> "sample.lsp" "r")))<td/>
+	<td>(<b>setq</b> file (<b>open</b> "sample.lsp" "r"))<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> c (<b>read-line</b> file))<td/>
+	<td>"C:\\Sample\\First.txt"<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> d (<b>read-line</b> file))<td/>
+	<td>"Second Line"<td/>
+	</tr>	</table>
+	<h4>NOTES</h4>
+	<ul>
+		<li>The read-line function advances to the subsequent line in the file automatically, providing the next line as its output.</li></br>
+		<li>Upon reaching the end of the file, the read-line function returns nil.</li></br>
+	</ul>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/write-line.html" title="LISP Function (write-line string [file-descriptor])">(write-line string [file-descriptor])</a></p></b>
+</body>
+</html>

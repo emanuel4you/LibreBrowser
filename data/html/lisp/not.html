@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>not</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(not item)</h2>
+	<hr/>
+<p>Determine whether an item is nil.</p>
+	<hr/>
+<p>This function assesses whether the item is nil. If the item is indeed nil, it returns a T. Conversely, if the item is not nil, it returns nil.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>not</b> "Yes!")<td/>
+	<td>nil<td/>
+	</tr>	<tr>
+	<td>(<b>not</b> (<b>></b> 5 6))<td/>
+	<td>T<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>The distinction lies in the fact that null verifies whether the item is associated with nil. Null is intended for assessing the presence of empty lists.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/numberp.html" title="LISP Function (numberp item)">(numberp item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/type.html" title="LISP Function (type item)">(type item)</a></p></b>
+</body>
+</html>

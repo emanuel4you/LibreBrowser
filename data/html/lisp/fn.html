@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>fn</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(fn arguments expression ...)</h2>
+	<hr/>
+<p>Develop a temporary, unnamed <b>LISP</b> function.</p>
+	<hr/>
+<p>This function generates another function dynamically. It is utilized when the overhead associated with establishing a new function is unwarranted. The fn function typically appears within the context of another function and is frequently employed.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>fn*</b> (a)<td/>
+	<td>a)            #user-function(0xaaaad1a8fd20)<td/>
+	</tr>	<tr>
+	<td>((<b>fn*</b> (a)<td/>
+	<td>a) 7)        7<td/>
+	</tr>	<tr>
+	<td>((<b>fn*</b> (a)<td/>
+	<td>(<b>+</b> a 1)) 10) 11<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/lambda.html" title="LISP Function (lambda a a)">(lambda (a) a)</a></p></b>
+</body>
+</html>

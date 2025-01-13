@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+     		th { text-align: left; }
+	</style>
+	<titel>python</titel>
+</head>
+<body>
+	<h2>Programming Overview of the PYTHON Language</h2>
+	<hr/>
+<p><b>Python</b> is a high-level, versatile programming language designed with an emphasis on code readability, utilizing significant indentation for clarity.</p>
+<p>It features dynamic type checking and automatic garbage collection. <b>Python</b> accommodates various programming paradigms, including structured (especially procedural), object-oriented, and functional programming. It is often referred to as a "batteries included" language due to its extensive standard library. <b>LibreCAD</b> comes with built-in <b>Python</b> interpreter and built-in <b>LibreCAD</b> module classes (<b>Libre<b>Python</b></b>) that are imported into the <b>Python</b> application.</p>
+	<hr/>
+	<h4>Python Functions</h4>
+<p>Each command in <b>Libre<b>Python</b></b> is designed to execute a specific function. For instance, <b>Python</b> functions can:</p>
+	<ul>
+		<li>Load various <b>Python</b> applications, <b>DCL</b> applications, and <b>LibreCAD</b> files.</li></br>
+		<li>Cross-language development. (<b>Libre<b>Python</b></b> can call <b>Libre<b>Lisp</b></b> functions/applications just as <b>Libre<b>Lisp</b></b> can execute <b>Libre<b>Python</b></b>).</li></br>
+		<li>Solicit input from the user or inform them of particular circumstances.</li></br>
+		<li>Import additional <b>Python</b> modules or load <b>LibreCAD</b> Script files.</li></br>
+		<li>Seek user input or alert the user regarding specific conditions.</li></br>
+		<li>Execute standard commands in <b>LibreCAD</b>.</li></br>
+		<li>Run system applications.</li></br>
+		<li>Process alphanumeric sequences.</li></br>
+		<li>Perform mathematical calculations.</li></br>
+		<li>Store data for future use.</li></br>
+		<li>Read from and write to files.</li></br>
+		<li>Select entities within a drawing.</li></br>
+		<li>Alter entities within a drawing.</li></br>
+		<li>Display information on the screen or save it to a file.</li></br>
+		<li>Compile Applications.</li></br>
+	</ul>
+<p>By developing applications that integrate various <b>Python</b> functions, users can create tailored solutions that enhance the CAD tools in <b>LibreCAD</b>, connect their drawings with other applications, and streamline their workflows. Utilizing <b>Python</b> alongside <b>LibreCAD</b> allows for the enhancement of CAD workstations through the creation of powerful add-on applications tailored to specific needs relevant to one's specialty, firm, profession, or industry.</p>
+<p>To make developing applications as easy as possible, <b>LibreCAD</b> has an integrated development environment, the <b>Libre<b>Python</b></b> <b>Ide</b>, with highlighting of <b>Python</b>, <b>Lisp</b> and <b>Dcl</b> sources, as well as search, debug, run, script load options.</p>
+	<h4>NOTE</h4>
+<p>For basic knowledge, operators, types, constants in <b>Python</b> programming language, see the following website: <a href="http://www.python.org" title="www.python.org">www.python.org</a></p></p>
+	<h4>import Modules</h4>
+<p>Almost all <b>Python</b> modules can be imported. Exceptions are external gui modules that are based on qt or gtk. Tkinter leaves.</p>
+	<h4>LibrePython</h4>
+<p>All <b>LibreCAD</b> classes are defined in the librecad.py file and can be imported like any <b>Python</b> module.</p>
+	<h4>EXAMPLE</h4>
+<p>from <b>librecad</b> import <b>RS_<b>Python</b>Gui</b> as gui</p>
+<p>mygui = gui()</p>
+<p>mygui.<b><i>MessageBox(</i></b>"Hallo, LibreCAD!"<b><i>)</i></b></p>
+<p><br/></p>
+	<h4>EXAMPLE</h4>
+<p>from <b>librecad</b> import <b>RS_<b>Python</b>Gui</b> as gui</p>
+<p>from <b>librecad</b> import <b>RS_<b>Python</b><b>Dcl</b></b> as dcl</p>
+<p>mygui = gui()</p>
+<p>mydcl = dcl()</p>
+<p>mygui.<b><i>prompt(</i></b>"Type \"okCancel()\" to start..."<b><i>)</i></b></p>
+<p>userClick = False</p>
+<p><br/></p>
+<p><b>def</b> okCancel():</p>
+<p style="padding-left: 30px;">dcl_id = mydcl.<b><i>loadDialog(</i></b>"test/ok_cancel.dcl"<b><i>)</i></b></p>
+<p style="padding-left: 30px;"><b>if</b> mydcl.<b><i>newDialog(</i></b>"ok_cancel_dlg", dcl_id<b><i>)</i></b> == False:</p>
+<p style="padding-left: 45px;"><b>print</b>("[okCancel] Error: can not load gui!")</p>
+<p style="padding-left: 45px;"><b>return</b></p>
+<p style="padding-left: 30px;">mydcl.<b><i>actionTile(</i></b>"accept", "(py-simple-<i>string</i> \"mydcl.doneDialog()\nuserClick = True\")"<b><i>)</i></b></p>
+<p style="padding-left: 30px;">mydcl.<b><i>actionTile(</i></b>"cancel", "(py-simple-<i>string</i> \"mydcl.doneDialog()\nuserClick = False\")"<b><i>)</i></b></p>
+<p style="padding-left: 30px;">mydcl.<b><i>startDialog(</i></b><b><i>)</i></b></p>
+<p style="padding-left: 30px;">mydcl.<b><i>unloadDialog(</i></b>dcl_id<b><i>)</i></b></p>
+<p style="padding-left: 30px;"><b>if</b> userClick:</p>
+<p style="padding-left: 60px;"><b>print</b>("[okCancel] Ok pressed")</p>
+<p style="padding-left: 30px;"><b>else</b>:</p>
+<p style="padding-left: 60px;"><b>print</b>("[okCancel] Cancel pressed")</p>
+<p><br/></p>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/python/python.html" title="PYTHON Functions">PYTHON Functions</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/dcl.html" title="Overview of the DCL (Dialog Control Language)">Overview of the DCL (Dialog Control Language)</a></p></b>
+<b><p><a href="https://github.com/emanuel4you/LibreCAD-Developer-Examples" title="Code Examples from the LibreCAD Developer Reference">Code Examples from the LibreCAD Developer Reference</a></p></b>
+</body>
+</html>

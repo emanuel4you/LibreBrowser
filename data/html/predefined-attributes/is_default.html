@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>is_default</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Attributes</h2>
+	<h2><b>is_default</b> = <i>true</i>/<i>false</i>;</h2>
+	<hr/>
+<p>Activate this <b>button</b> when [Enter] is pressed.</p>
+	<hr/>
+<p>This attribute indicates that a specific <b>button</b> is designated as the default <b>button</b> when the user presses the [Enter] key. In a <b>dialog</b> box, only one <b>button</b> may have the <b>is_default</b> attribute set to <i>true</i>. Generally, the <b>is_default</b> attribute is applied to the OK or Apply <b>button</b>.</p>
+<p>Possible values are <i>true</i> or <i>false</i> (default: <i>false</i>).</p>
+	<h4>EXAMPLE</h4>
+<p><b>is_default</b> = <i>true</i>;</p>
+	<h4>NOTE</h4>
+	<ul>
+		<li>The <b>is_default</b> attribute does not apply while another <b>button</b> has the focus.</li></br>
+		<li>Setting the <a href="qrc:/html/p<i>red</i>efined-attributes/initial_focus.html" title="DCL Attribute: initial_focus">initial_focus</a> to the OK <b>button</b> ensures that <b>is_default</b> applies and allows the user to exit the <b>dialog</b> box quickly.</li></br>
+	</ul>
+<p>Valid Tile</p>
+<b><p><a href="qrc:/html/dcl-tiles/button.html" title="DCL Tile: button">button</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/predefined-attributes/is_enabled.html" title="DCL Attribute: is_enabled">is_enabled</a></p></b>
+</body>
+</html>

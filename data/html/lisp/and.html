@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>and</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(and expression ...)</h2>
+	<hr/>
+<p>This function executes a logical AND</p>
+	<hr/>
+<p>This function executes a logical AND operation on the preceding expression. It yields a true (T) result only if both statements evaluate to true. Conversely, if either or both statements evaluate to false (nil), the function will return false (nil).</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> d 9))<td/>
+	<td>(<b>setq</b> d 9)<td/>
+	</tr>	<tr>
+	<td>(<b>and</b> (<b>></b> d 12)<td/>
+	<td>(<b><</b> d 13)) nil<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> d 12.25))<td/>
+	<td>(<b>setq</b> d 12.25)<td/>
+	</tr>	<tr>
+	<td>(<b>and</b> (<b>></b> d 12)<td/>
+	<td>(<b><</b> d 13)) T<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/1s_compliment.html" title="LISP Function (~ number)">(~ number)</a></p></b>
+boole	<b><p><a href="qrc:/html/lisp/not.html" title="LISP Function (not item)">(not item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/or.html" title="LISP Function (or statement ...)">(or statement ...)</a></p></b>
+</body>
+</html>

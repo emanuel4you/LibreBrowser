@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>name</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Tiles</h2>
+<p>name <b>: dialog</b></p>
+	<hr/>
+<p>Create a dialog box.</p>
+<p><b>DCL</b> Cluster Tile</p>
+	<hr/>
+<p>Present a <i>vertical</i> <b>list</b> of text, which may include an optional scrollbar. This cluster tile establishes a dialog box, with the name prefix specifying the case-sensitive identifier for the dialog box. This identifier is essential for recognizing the dialog box within the <b>DCL</b> file. To access the dialog box within [link]LISP, use the [link]load_dialog (to load the <b>DCL</b> file) and the [link]new_dialog (to display the dialog box) functions, as in the following EXAMPLE:</p>
+<p>(setq dlg (load_dialog "dclfile"))</p>
+<p>(new_dialog "name" dlg)</p>
+	<h4>NOTE</h4>
+<p>When both the <a href="qrc:/html/predefined-attributes/label.html" title="<b>DCL</b> Attribute: label">label</a> and <a href="qrc:/html/predefined-attributes/value.html" title="<b>DCL</b> Attribute: value">value</a> attributes are specified, the value attribute will take precedence over the label.</p>
+	<h4>Valid Attributes</h4>
+<p>name <b>: dialog</b> {</p>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/initial_focus.html" title="DCL Tile: initial_focus">initial_focus</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/label.html" title="DCL Tile: label">label</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href=".html" title="">pointsize</a> = int;</p></b>
+<b><p style="padding-left: 35px;"><a href=".html" title="">typeface</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/value.html" title="DCL Tile: value">value</a> = "string";</p></b>
+<p>}</p>
+	<h4>EXAMPLE</h4>
+<p>objext <b>: dialog</b> {</p>
+<p><b>initial_focus</b> = "OK"</p>
+<p><b>label</b> = "Object Extraction"</p>
+<p><b>: boxed_row</b> {</p>
+<p>label="Select Objects";</p>
+<p><b>: button</b> {</p>
+<p><b>action</b> = "(linelsp)";</p>
+<p><b>key</b> = "BB";</p>
+<p><b>label</b> = "Line";</p>
+<p>}</p>
+<p><b>: button</b> {</p>
+<p><b>action</b> = "(circlelsp)";</p>
+<p><b>key</b> = "BW";</p>
+<p><b>label</b> = "Circle";</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+	<h4>Related <b>DCL</b> Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/column.html" title="DCL Tile: column">column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/row.html" title="DCL Tile: row">row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_column.html" title="DCL Tile: boxed_column">boxed_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_row.html" title="DCL Tile: boxed_row">boxed_row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_radio_column.html" title="DCL Tile: boxed_radio_column">boxed_radio_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_radio_row.html" title="DCL Tile: boxed_radio_row">boxed_radio_row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_column.html" title="DCL Tile: radio_column">radio_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_row.html" title="DCL Tile: radio_row">radio_row</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/dcl-tiles/ok_cancel.html" title="DCL Tile: ok_cancel">ok_cancel</a></p></b>
+</body>
+</html>

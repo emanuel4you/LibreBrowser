@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>atom</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(atom item)</h2>
+	<hr/>
+<p>Assess whether a given item qualifies as an atom.</p>
+	<hr/>
+<p>In general terms, an atom is defined as a singular value or variable, specifically anything that is not a list. The atom function evaluates the item to ascertain its status as an atom. If the item is identified as a list, the function returns nil; conversely, if it is not a list, it returns T.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>atom</b> '(1 2 3))<td/>
+	<td>nil<td/>
+	</tr>	<tr>
+	<td>(<b>atom</b> 5)<td/>
+	<td>T<td/>
+	</tr>	<tr>
+	<td>(<b>atom</b> '5)<td/>
+	<td>T<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+atoms-family	<b><p><a href="qrc:/html/lisp/listp.html" title="LISP Function (listp item)">(listp item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/numberp.html" title="LISP Function (numberp item)">(numberp item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/type.html" title="LISP Function (type item)">(type item)</a></p></b>
+</body>
+</html>

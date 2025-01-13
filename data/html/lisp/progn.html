@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>progn</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(progn statement1 statement2 ...)</h2>
+	<hr/>
+<p>Evaluate all the elements of the list and return the final evaluated element.</p>
+	<hr/>
+<p>The function is constrained, as the if function permits only one if statement followed by a then statement. Each if function can accommodate only a single then statement and an else statement. In contrast, the progn function enables the evaluation of multiple statements. The value returned corresponds to the last statement evaluated.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> a 9))<td/>
+	<td>(<b>setq</b> a 9)<td/>
+	</tr>	<tr>
+	<td>(<b>progn</b> (<b>setq</b> b a))<td/>
+	<td>(<b>progn</b> (<b>setq</b> b a)<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> (<b>1+</b> b))<td/>
+	<td>(<b>setq</b> (<b>1+</b> b)<td/>
+	</tr>	<tr>
+	<td>))<td/>
+	<td>)<td/>
+	</tr>	<tr>
+	<td>))<td/>
+	<td>)<td/>
+	</tr>	<tr>
+	<td>10)<td/>
+	<td>10<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/apply.html" title="LISP Function (apply function list)">(apply function list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/defun.html" title="LISP Function (defun [c:] name [arg1 arg2 ...] / [local-var1 local-var2 ...])">(defun [c:] name ([arg1 arg2 ...] / [local-var1 local-var2 ...])</a></p></b>
+<p>expression)</p>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+</body>
+</html>

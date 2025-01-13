@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>prompt</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(prompt string)</h2>
+	<hr/>
+<p>Print a message to the command line.</p>
+	<hr/>
+<p>This function outputs the string to both the command line and the Prompt History window. The prompt function responds to control characters.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>prompt</b> "42")<td/>
+	<td>42<td/>
+	</tr>	<tr>
+	<td>nil)<td/>
+	<td>nil<td/>
+	</tr>	<tr>
+	<td>(<b>prompt</b> "This is text.\n")<td/>
+	<td>This is text.<td/>
+	</tr>	<tr>
+	<td>nil)<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>The difference between the prompt function and <b>LISP</b>'s other</p>
+	<b><p><a href="qrc:/html/lisp/prin1.html" title="LISP Function (prin1 is that prompt only prints to the Prompt History window and)">prin1) is that prompt only prints to the Prompt History window and</a></p></b>
+<p>not to a file.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/terpri.html" title="LISP Function (terpri)">(terpri)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/write-line.html" title="LISP Function (write-line string [file-descriptor])">(write-line string [file-descriptor])</a></p></b>
+</body>
+</html>

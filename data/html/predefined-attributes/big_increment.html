@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>big_increment</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Attributes</h2>
+	<h2><b>big_increment</b> = integer;</h2>
+	<hr/>
+<p>Adjust the <b>slider</b> by this amount with each click (step).</p>
+	<hr/>
+<p>This attribute defines the increment value of a slider when the user clicks on its central section. The default increment is set to one-tenth of the total range, which is determined by the minimum value (as indicated by the <a href="qrc:/html/p<i>red</i>efined-attributes/min_value.html" title="DCL Attribute: min_value">min_value</a> attribute) and the maximum value (as indicated by the <a href="qrc:/html/p<i>red</i>efined-attributes/max_value.html" title="DCL Attribute: max_value">max_value</a> attribute.).</p>
+<p>For integer values, please provide an integer that falls within the range established by <b>min_value</b> and max_value.</p>
+	<h4>EXAMPLE</h4>
+<p><b>min_value</b> = -16;</p>
+<p><b>max_value</b> = 16;</p>
+<p><b>small_increment</b> = 1;</p>
+<p><b>big_increment</b> = 10;</p>
+	<h4>NOTE</h4>
+	<ul>
+		<li>The default <b>value</b> of <b>min_<b>value</b></b> is 0; the minimum <b>value</b> is -2,147,483,648. The default <b>value</b> of <b>max_<b>value</b></b> is 10,000; the maximum <b>value</b> is 2,147,483,647.</li></br>
+		<li>Horizontal sliders increase in <b>value</b> from <i>left</i> to <i>right</i>; <i>vertical</i> sliders increase <b>value</b> from <i>top</i> to <i>bottom</i>.</li></br>
+	</ul>
+	<h4>Valid Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/dial.html" title="DCL Tile: dial">dial</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/scroll.html" title="DCL Tile: scroll">scroll</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/slider.html" title="DCL Tile: slider">slider</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/predefined-attributes/children_alignment.html" title="DCL Attribute: children_alignment">children_alignment</a></p></b>
+</body>
+</html>

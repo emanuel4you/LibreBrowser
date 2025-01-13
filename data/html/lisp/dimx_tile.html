@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>dimx_tile</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(dimx_tile key)</h2>
+	<hr/>
+<p>Establish the x-dimension of a dialog box tile.</p>
+	<hr/>
+<p>The dimensions of the tile identified by the name key are [link]. The x and y dimensions are generally utilized by other dialog box functions, such as <a href="qrc:/html/lisp/vec.html" title="<b>LISP</b> Function (<b>vec</b>)">(<b>vec</b>)</a>tor_image.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>dimx_tile</b> "myimage")<td/>
+	<td>20<td/>
+	</tr>	<tr>
+	<td>(<b>dimy_tile</b> "myimage")<td/>
+	<td>15<td/>
+	</tr>	</table>
+	<h4>NOTES</h4>
+	<ul>
+		<li>The dimension returned is one less than the actual size, as the dimension indexing starts at 0. Therefore, in the example provided, the tile's size is 16 x 16.</li></br>
+		<li>The key is a case-sensitive string.</li></br>
+	</ul>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/fill_image.html" title="LISP Function (fill_image x y width height color)">(fill_image x y width height color)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/slide_image.html" title="LISP Function (slide_image x y width height slide)">(slide_image x y width height slide)</a></p></b>
+</body>
+</html>

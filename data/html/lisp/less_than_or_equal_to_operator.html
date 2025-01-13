@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>less_than_or_equal_to_operator</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+<p>(<b><=</b> item1 item2 ...)</p>
+	<hr/>
+<p>The initial item is either less than or equal to the subsequent items.</p>
+	<hr/>
+<p>This function serves as the less-than or equal-to operator:</p>
+	<ul>
+		<li>If item1 is less than or equal to item2, the function yields a T (true).</li></br>
+		<li>If item1 exceeds item2, the function yields nil (false).</li></br>
+	</ul>
+<p>In cases where the function encompasses more than two items, it returns T when every item to the right is less than or equal to the item on its left. The items may consist of either numbers or strings.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b><=</b> "x" "x" "z")<td/>
+	<td>T<td/>
+	</tr>	<tr>
+	<td>(<b><=</b> "x" "y" "x")<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>operator) function.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/not_equal_to_operator.html" title="LISP Function (/= item1 item2 ...)">(/= item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/less_than_operator.html" title="LISP Function (< item1 item2 ...)">(< item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/equal_to_operator.html" title="LISP Function (= item1 item2 ...)">(= item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/greater_than_operator.html" title="LISP Function (> item1 item2 ...)">(> item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/greater_than_or_equal_to_operator.html" title="LISP Function (>= item1 item2 ...)">(>= item1 item2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/cond.html" title="LISP Function (cond statement1 result1 ... ...)">(cond (statement1 result1 ...) ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/if.html" title="LISP Function (if test statement1 [statement2])">(if test statement1 [statement2])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/while.html" title="LISP Function (while text statement )">(while text statement )</a></p></b>
+</body>
+</html>

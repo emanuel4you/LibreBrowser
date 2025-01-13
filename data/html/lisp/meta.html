@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>meta</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(meta obj)</h2>
+	<hr/>
+<p>Returns the metadata of obj, returns nil if there is no metadata.</p>
+	<hr/>
+<p>This function this takes a single <b>LISP</b> function/list/vector/hash-map argument and returns the value of the metadata attribute.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>meta</b> (<b>fn*</b> (a)<td/>
+	<td>a))                     nil<td/>
+	</tr>	<tr>
+	<td>(<b>meta</b> (<b>with-meta</b> (<b>fn*</b> (a)<td/>
+	<td>a) {"b" 1})) {"b" 1}<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/with-meta.html" title="LISP Function (with-meta func)">(with-meta func)</a></p></b>
+</body>
+</html>

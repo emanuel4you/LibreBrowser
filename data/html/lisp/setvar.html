@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>setvar</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(setvar sysvar value)</h2>
+	<hr/>
+<p>Adjust the system variable to the specified value.</p>
+	<hr/>
+<p>This function modifies the values of system variables within <b>LibreCAD</b>.</p>
+<p>The sysvar parameter represents the precise name of the system variable, formatted as a string.</p>
+<p>The value denotes the new setting for the system variable. The format of this value can differ based on the specific system variable; it may be an integer, a real number, a list of x,y or x,y,z coordinates, or a string, as illustrated in the examples provided below.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setvar</b> "cmdecho" 1)<td/>
+	<td>1<td/>
+	</tr>	<tr>
+	<td>(<b>setvar</b> "gridunit" '(1 1))<td/>
+	<td>(1.0 1.0)<td/>
+	</tr>	<tr>
+	<td>(<b>setvar</b> "insbase" '(1 2 3))<td/>
+	<td>(1.0 2.0 3.0)<td/>
+	</tr>	<tr>
+	<td>(<b>setvar</b> "blockspath" "c:\path")<td/>
+	<td>"c:\path"<td/>
+	</tr>	</table>
+	<h4>NOTES</h4>
+	<ul>
+		<li>The <b>LISP</b> setvar function operates similarly to the Setvar command, with one notable exception: variables such as Angbase, which store angular measurements and accept inputs in various units (degrees, radians, grads, etc.). However, the <b>LISP</b> setvar function defaults to radians as the angular unit.</li></br>
+		<li>Certain system variables are read-only, meaning their values cannot be altered using setvar. For instance, the CDate system variable reflects the current date and time, which cannot be modified through the setvar function. Instead, adjustments must be made via the Windows Date & Time Properties dialog box. Nevertheless, it is possible to retrieve the value of any system variable using getvar.</li></br>
+	</ul>
+	<h4>More about...</h4>
+setcfgsetenvprogeCAD</body>
+</html>

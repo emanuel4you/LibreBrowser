@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>foreach</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(foreach variable list expression ...)</h2>
+	<hr/>
+<p>Apply the expression to every item in a list.</p>
+	<hr/>
+<p>This function executes an expression on each element within the list. The initial argument for the foreach function is a variable, which serves as a temporary placeholder for the modified elements. The subsequent argument is the list itself, comprising the elements that will be modified. After the list, one or more expressions are provided, specifying the operations to be carried out on the list elements. The foreach function ultimately returns the outcome of the final evaluation.</p>
+	<h4>EXAMPLE</h4>
+<p>Code</p>
+<p>(<b>setq</b> sample '(1.0 1.5 2.0 2.5))</p>
+<p>(foreach var sample (progn</p>
+<p>(<b>setq</b> var (<b>*</b> 2.0 var))</p>
+<p>(<b>princ</b> (<b>strcat</b> "\nTwice the value is " (rtos var)))))</p>
+<p>(<b>princ</b>)</p>
+<p>Returns</p>
+<p>Twice the value is 2.0000</p>
+<p>Twice the value is 3.0000</p>
+<p>Twice the value is 5.0000</p>
+	<h4>More about...</h4>
+mapcar</body>
+</html>

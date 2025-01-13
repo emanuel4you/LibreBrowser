@@ -278,7 +278,7 @@ QMenu *LibreBrowserWindow::createBookmarkMenu()
     QAction *ch = bookmarkMenu->addAction(tr("Zulip &Chat"));
 
     connect(help, &QAction::triggered, this, [=](){
-        currentTab()->setUrl(QUrl("qrc:/help/index.html"));
+        currentTab()->setUrl(QUrl("qrc:/html/index.html"));
     });
     connect(wiki, &QAction::triggered, this, [=](){
         currentTab()->setUrl(QUrl("https://dokuwiki.librecad.org/"));
@@ -296,7 +296,7 @@ QMenu *LibreBrowserWindow::createBookmarkMenu()
         currentTab()->setUrl(QUrl("https://librecad.readthedocs.io/en/latest/ref/menu.html#widgets"));
     });
     connect(devel, &QAction::triggered, this, [=](){
-        currentTab()->setUrl(QUrl("qrc:/help/developer.html"));
+        currentTab()->setUrl(QUrl("qrc:/html/developer.html"));
     });
     connect(fo, &QAction::triggered, this, [=](){
         currentTab()->setUrl(QUrl("https://forum.librecad.org/"));

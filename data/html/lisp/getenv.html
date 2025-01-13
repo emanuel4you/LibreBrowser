@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>getenv</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(getenv variable)</h2>
+	<hr/>
+<p>Assess the value of the operating system variable.</p>
+	<hr/>
+<p>This function retrieves the value of a designated operating system environment variable, such as that stored by the DOS PATH variable. If the variable is present, its value is returned as a string; if it is absent, nil is returned.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>getenv</b> "PATH")<td/>
+	<td>C:\\;C:\\WIN;C:\\LibreCad<td/>
+	</tr>	<tr>
+	<td>(<b>getenv</b> "PATH")<td/>
+	<td>"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"<td/>
+	</tr>	<tr>
+	<td>(<b>getenv</b> "bla")<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+getcfg	<b><p><a href="qrc:/html/lisp/getvar.html" title="LISP Function (getvar sysvar)">(getvar sysvar)</a></p></b>
+setenv</body>
+</html>

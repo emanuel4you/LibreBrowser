@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>try</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(try* cmd [arguments] ...)</h2>
+	<hr/>
+<p>Error Handling when executing <b>Lisp</b> code.</p>
+	<hr/>
+<p>When executing <b>Lisp</b> code, different errors can occur: coding errors made by the programmer, errors due to wrong input, or other unforeseeable things. When an error occurs, <b>Lisp</b> will normally stop and generate an error message. The technical term for this is: <b>Lisp</b> will throw an exception (<b>throw</b> an error). The try catch form looks like this: (<b>try*</b> A (catch* B C)). The form A is evaluated, if it throws an exception, then form C is evaluated with a new environment that binds the symbol B to the value of the exception that was thrown.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>try*</b> 123 (catch* e 456))<td/>
+	<td>123<td/>
+	</tr>	<tr>
+	<td>(<b>try*</b> abc (catch* exc (<b>prn</b> "exc is:" exc))))<td/>
+	<td>(<b>try*</b> abc (catch* exc (<b>prn</b> "exc is:" exc)))<td/>
+	</tr>	<tr>
+	<td>"exc is:" "'abc' not found" => to History prompt.)<td/>
+	<td>"exc is:" "'abc' not found" => to History prompt.<td/>
+	</tr>	<tr>
+	<td>nil)<td/>
+	<td>nil<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+*error*	<b><p><a href="qrc:/html/lisp/throw.html" title="LISP Function (throw)">(throw)</a></p></b>
+</body>
+</html>

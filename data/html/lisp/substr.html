@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>substr</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(substr string start [length])</h2>
+	<hr/>
+<p>Give me part of that string.</p>
+	<hr/>
+<p>This function dissects strings by extracting a sub-string from the original string, which can subsequently be assigned to a variable or utilized as any other string.</p>
+<p>The parameter 'start' specifies the character position in the string from which to begin extraction. In contrast to other functions that operate on list elements, the 'substr' function treats the first character of the string as position one (rather than zero). If the starting position exceeds the length of the string, 'substr' will return an empty string (non-nil).</p>
+<p>The 'length' parameter indicates the number of characters to be included in the extraction. If this argument is omitted, the sub-string will extend to the end of the original string. Should the specified length exceed the available number of characters, the function will return the entire segment from the indicated starting character to the end without generating an error.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>substr</b> "Texas" 3 )<td/>
+	<td>"xas"<td/>
+	</tr>	<tr>
+	<td>(<b>substr</b> "New Mexico" 12 )<td/>
+	<td>""<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/strcat.html" title="LISP Function (strcat string1 [string2] )">(strcat string1 [string2] )</a></p></b>
+	<b><p><a href="qrc:/html/lisp/strlen.html" title="LISP Function (strlen [string1] [string2] )">(strlen [string1] [string2] )</a></p></b>
+</body>
+</html>

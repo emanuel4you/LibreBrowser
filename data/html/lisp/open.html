@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>open</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(open filename mode)</h2>
+	<hr/>
+<p>Open a file.</p>
+	<hr/>
+<p>This function allows for the filename of a file to be utilized in input and output operations. The filename parameter indicates the path and name of the file intended for opening.</p>
+<p>The opened file is assigned a file descriptor, which should be stored as a variable. It is important to reference the file using this file descriptor rather than the filename itself.</p>
+<p>The mode parameter offers three options, all of which must be specified in lowercase:</p>
+<p>Mode Description</p>
+<p>"r" Opens the file in read-only mode; returns nil if the file is not found.</p>
+<p>"w" Opens the file for writing; this mode overwrites any existing data and creates a new file if it does not already exist.</p>
+<p>"a" Opens the file for writing; this mode appends new data to the existing content and creates a new file if it does not exist.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> n (<b>open</b> "existing.txt" "w"))<td/>
+	<td><File: #2190dec2><td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> n (<b>open</b> "noexist.lsp" "r"))<td/>
+	<td>nil<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> n (<b>open</b> "\\sample\\exiting.txt" "a")<td/>
+	<td><File: #2190c2c3><td/>
+	</tr>	</table>
+	<h4>NOTES</h4>
+	<ul>
+		<li>In append mode, new information is added to the end of the current file.</li></br>
+		<li><b>LISP</b> is capable of reading only ASCII files (binary files are not supported) through sequential access (random access is not available).</li></br>
+		<li>To denote subdirectory names, one may use either two backslashes (\\) or a single forward slash (<b>/</b>).</li></br>
+	</ul>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/close.html" title="LISP Function (close file-descriptor)">(close file-descriptor)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/read-line.html" title="LISP Function (read-line [file-descriptor])">(read-line [file-descriptor])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/write-line.html" title="LISP Function (write-line string [file-descriptor])">(write-line string [file-descriptor])</a></p></b>
+</body>
+</html>

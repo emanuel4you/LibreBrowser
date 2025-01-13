@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>scroll</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Tiles</h2>
+	<h2><b>: scroll</b></h2>
+	<hr/>
+<p>Display a <i>horizontal</i> or <i>vertical</i> scroll.</p>
+<p><b>DCL</b> Active Tile</p>
+	<hr/>
+<p>This interactive tile features a scroll bar that can be oriented either <i>horizontal</i>ly or <i>vertical</i>ly. The speed of the scroll's movement varies based on the user's click location.</p>
+	<h4>NOTE</h4>
+<p>The scroll tile is specifically designed for the <b>DCL</b> implementation included with <b><b>LibreDcl+</b></b>.</p>
+	<h4>Valid Attributes</h4>
+<p><b>: scroll</b> {</p>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/action.html" title="DCL Tile: action">action</a> = "(string)";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/alignment.html" title="DCL Tile: alignment">alignment</a> = position;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/big_increment.html" title="DCL Tile: big_increment">big_increment</a> = int;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_height.html" title="DCL Tile: fixed_height">fixed_height</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_width.html" title="DCL Tile: fixed_width">fixed_width</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/height.html" title="DCL Tile: height">height</a> = number;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/key.html" title="DCL Tile: key">key</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/label.html" title="DCL Tile: label">label</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/layout.html" title="DCL Tile: layout">layout</a> = position'</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/max_value.html" title="DCL Tile: max_value">max_value</a> = int;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/min_value.html" title="DCL Tile: min_value">min_value</a> = int;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/mnemonic.html" title="DCL Tile: mnemonic">mnemonic</a> = "char";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/small_increment.html" title="DCL Tile: small_increment">small_increment</a> = int;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/value.html" title="DCL Tile: value">value</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/width.html" title="DCL Tile: width">width</a> = number;</p></b>
+<p>}</p>
+	<h4>EXAMPLE</h4>
+<p><b>: scroll</b> {</p>
+<p><b>action</b> = "(scroll)";</p>
+<p><b>big_increment</b> = 32;</p>
+<p><b>key</b> = "S1";</p>
+<p><b>max_value</b> = 512;</p>
+<p><b>min_value</b> = 0;</p>
+<p><b>small_increment</b> = "1";</p>
+<p><b>value</b> = "16";</p>
+<p>}</p>
+	<h4>NOTE</h4>
+<p>It is important to note that the <a href="qrc:/html/predefined-attributes/value.html" title="<b>DCL</b> Attribute: value">value</a> attribute specifies the default setting of the scroll bar, with the standard being <a href="qrc:/html/predefined-attributes/min_value.html" title="<b>DCL</b> Attribute: min_value">min_value</a>.</p>
+	<h4>Related <b>DCL</b> Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/button.html" title="DCL Tile: button">button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/edit_box.html" title="DCL Tile: edit_box">edit_box</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/image_button.html" title="DCL Tile: image_button">image_button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/list_box.html" title="DCL Tile: list_box">list_box</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/popup_list.html" title="DCL Tile: popup_list">popup_list</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_button.html" title="DCL Tile: radio_button">radio_button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/toggle.html" title="DCL Tile: toggle">toggle</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/dcl-tiles/spacer.html" title="DCL Tile: spacer">spacer</a></p></b>
+</body>
+</html>

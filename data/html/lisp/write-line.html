@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>write-line</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(write-line string [file-descriptor])</h2>
+	<hr/>
+<p>Write that string to a file.</p>
+	<hr/>
+<p>This method is more effective and convenient compared to using a formatted string. The file is identified by the file descriptor, which is allocated by the open function. If the file descriptor is omitted, the string will be output to the command line and the Prompt History window.</p>
+	<h4>EXAMPLES</h4>
+<p>Code                                Returns   Prints to File</p>
+<p>(<b>setq</b> fil (<b>open</b> "sample.lsp" "w"))</p>
+<p>(<b>write-line</b> "Name:" fil)           "Name:"    Name:</p>
+<p>(<b>write-line</b> "Address:" fil)        "Address:" Address:</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/read-line.html" title="LISP Function (read-line [file-descriptor])">(read-line [file-descriptor])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+</body>
+</html>

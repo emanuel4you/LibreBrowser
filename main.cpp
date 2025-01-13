@@ -54,15 +54,109 @@
 #include <QApplication>
 #include <QWebEngineProfile>
 #include <QWebEngineSettings>
+#include <QFile>
 
 QUrl commandLineUrlArgument()
 {
     const QStringList args = QCoreApplication::arguments();
     for (const QString &arg : args.mid(1)) {
         if (!arg.startsWith(QLatin1Char('-')))
+        {
+            if (arg == "/" || arg == "/=" || !arg.contains("/"))
+            {
+                QString url = arg;
+
+                if (arg == "+")
+                {
+                    url = "addition_operator";
+                }
+                else if(arg == "-")
+                {
+                    url = "subtraction_operator";
+                }
+                else if(arg == "*")
+                {
+                    url = "multiplication_operator";
+                }
+                else if(arg == "/")
+                {
+                    url = "division_operator";
+                }
+                else if(arg == "=")
+                {
+                    url = "equal_to_operator";
+                }
+                else if (arg == "/=")
+                {
+                    url = "not_equal_to_operator";
+                }
+                else if(arg == "<")
+                {
+                    url = "less_than_operator";
+                }
+                else if(arg == "<=")
+                {
+                    url = "less_than_or_equal_to_operator";
+                }
+                else if(arg == ">")
+                {
+                    url = "greater_than_operator";
+                }
+                else if(arg == ">=")
+                {
+                    url = "greater_than_or_equal_to_operator";
+                }
+                else if(arg == "~")
+                {
+                    url = "1s_compliment";
+                }
+                else if(arg == "%")
+                {
+                    url = "modulo_operator";
+                }
+                else {}
+
+                if (arg.endsWith('*') || arg.endsWith('!'))
+                {
+                    url.chop(1);
+                }
+
+                if (arg.endsWith('?'))
+                {
+                    url.chop(1);
+                    url += "_q";
+                }
+
+                if (QFile::exists(":/html/" + url + ".html"))
+                {
+                    return QUrl::fromUserInput("qrc:/html/" + url + ".html");
+                }
+                else if(QFile::exists(":/html/dcl-tiles/" + url + ".html"))
+                {
+                    return QUrl::fromUserInput("qrc:/html/dcl-tiles/" + url + ".html");
+                }
+                else if(QFile::exists(":/html/lisp/" + url + ".html"))
+                {
+                    return QUrl::fromUserInput("qrc:/html/lisp/" + url + ".html");
+                }
+                else if(QFile::exists(":/html/predefined-attributes/" + url + ".html"))
+                {
+                    return QUrl::fromUserInput("qrc:/html/predefined-attributes/" + url + ".html");
+                }
+                else if(QFile::exists(":/html/python/" + url + ".html"))
+                {
+                    return QUrl::fromUserInput("qrc:/html/python/" + url + ".html");
+                }
+                else
+                {
+                    return QUrl(QStringLiteral("qrc:/html/index.html"));
+                }
+            }
+
             return QUrl::fromUserInput(arg);
+        }
     }
-    return QUrl(QStringLiteral("qrc:/data/index.html"));
+    return QUrl(QStringLiteral("qrc:/html/index.html"));
 }
 
 int main(int argc, char **argv)
@@ -70,7 +164,7 @@ int main(int argc, char **argv)
     QCoreApplication::setOrganizationName("LibreCAD");
 
     QApplication app(argc, argv);
-    app.setWindowIcon(QIcon(QStringLiteral(":/data/AppLogoColor.png")));
+    app.setWindowIcon(QIcon(QStringLiteral(":AppLogoColor.png")));
 
     QWebEngineProfile::defaultProfile()->settings()->setAttribute(QWebEngineSettings::PluginsEnabled, true);
     QWebEngineProfile::defaultProfile()->settings()->setAttribute(QWebEngineSettings::DnsPrefetchEnabled, true);

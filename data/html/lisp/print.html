@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>print</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(print [expression [file-descriptor]])</h2>
+	<hr/>
+<p>Print, using formatted printing.</p>
+	<hr/>
+<p>The print function automatically inserts a new-line character prior to the expression and appends a space following it. Similar to <a href="qrc:/html/lisp/prin1.html" title="<b>LISP</b> Function (<b>prin1</b>)">(<b>prin1</b>)</a>, the print function interprets control characters literally, meaning it does not execute them.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>print</b> "First pt: ")<td/>
+	<td>New line.<td/>
+	</tr>	<tr>
+	<td>"First pt:Space." "First pt:")<td/>
+	<td>"First pt:Space." "First pt:"<td/>
+	</tr>	<tr>
+	<td>(<b>print</b> "\nCompany\005: ")<td/>
+	<td>New line. "\nCompany\005: "<td/>
+	</tr>	<tr>
+	<td>"\nCompany\005:Space.")<td/>
+	<td>"\nCompany\005:Space."<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>It is important to note that the distinction between the print function and other print-related functions in <b>LISP</b>, such as <a href="qrc:/html/lisp/prin1.html" title="<b>LISP</b> Function (<b>prin1</b>)">(<b>prin1</b>)</a> and <a href="qrc:/html/lisp/princ.html" title="<b>LISP</b> Function (<b>princ</b>)">(<b>princ</b>)</a>, lies in the fact that print inherently adds a new-line character before the expression and a space after it.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/prompt.html" title="LISP Function (prompt string)">(prompt string)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/terpri.html" title="LISP Function (terpri)">(terpri)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/write-line.html" title="LISP Function (write-line string [file-descriptor])">(write-line string [file-descriptor])</a></p></b>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>aspect_ratio</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Attributes</h2>
+	<h2><b>aspect_ratio</b> = real;</h2>
+	<hr/>
+<p>Specify an image's aspect ratio.</p>
+	<hr/>
+<p>This attribute defines the proportion of an image's <b>width</b> in relation to its <b>height</b>. A frequently used aspect ratio is 1.33, corresponding to a <b>width</b> of 4 and a <b>height</b> of 3.</p>
+<p>To produce <b>image</b>s with the appropriate aspect ratio, one should establish a paperspace viewport measuring 1.333 units in <b>width</b> and 1 unit in height, subsequently scaling as needed. Transition to modelspace to accurately center the <b>image</b> by utilizing Pan and Zoom, and then create a slide.</p>
+<p>For the real parameter, please specify a real number. When the <b>value</b> is set to 0.0, the <b>image</b> tile will expand to match the <b>image</b> size. The default setting is (none).</p>
+	<h4>EXAMPLE</h4>
+<p><b>aspect_ratio</b> = 0.0;</p>
+	<h4>NOTE</h4>
+<p>It is important to note that slide libraries are not supported. The aspect_ratio attribute is used with the <a href="qrc:/html/p<i>red</i>efined-attributes/height.html" title="DCL Attribute: height">height</a> or <a href="qrc:/html/p<i>red</i>efined-attributes/width.html" title="DCL Attribute: width">width</a> attribute. You do not use the aspect_ratio attribute when you use both height and width.</p>
+	<h4>Valid Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/image.html" title="DCL Tile: image">image</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/image_button.html" title="DCL Tile: image_button">image_button</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/predefined-attributes/big_increment.html" title="DCL Attribute: big_increment">big_increment</a></p></b>
+</body>
+</html>

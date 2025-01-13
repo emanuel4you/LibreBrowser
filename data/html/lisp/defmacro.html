@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>defmacro</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(defmacro! "funktion-name" coll)</h2>
+	<hr/>
+<p>Define a macro.</p>
+	<hr/>
+<p>This function is like def!, but the resulting function name is declared as a macro.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>defmacro!</b> 2+ (<b>fn*</b> (num)(<b>+</b> num 2)))<td/>
+	<td>=>  (2+ 1) 3<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/defun.html" title="LISP Function (defun [c:] name [arg1 arg2 ...] / [local-var1 local-var2 ...] expression)">(defun [c:] name ([arg1 arg2 ...] / [local-var1 local-var2 ...]) expression)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/help.html" title="LISP Function (help "func")">(help "func")</a></p></b>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>button</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Tiles</h2>
+	<h2><b>: button</b></h2>
+	<hr/>
+<p>Create a button may or may not include a label.</p>
+<p><b>DCL</b> Active Tile</p>
+	<hr/>
+<p>This active tile facilitates the creation of a button, which can feature a <b>label</b> or remain un<b>label</b>led. Typically, a button serves the purpose of closing a dialog box or presenting an additional box (referred to as "tunneling dialog boxes"). It is essential for every dialog box to contain at least one button linked to the [link]LISP function [link]done_dialog; failure to do so will result in the program becoming unresponsive.</p>
+<p><b>: button</b> {</p>
+<p><b>action</b> = "(done_dialog)";</p>
+<p><b>label</b> = "OK";</p>
+<p>}</p>
+	<h4>NOTE</h4>
+<p>Several predefined tiles are available that encompass the most frequently used button configurations, such as the <a href="qrc:/html/dcl-tiles/ok_only.html" title="<b>DCL</b> Tile: ok_only">ok_only</a> attribute, <a href="qrc:/html/dcl-tiles/ok_cancel.html" title="<b>DCL</b> Tile: ok_cancel">ok_cancel</a>, and <a href="qrc:/html/dcl-tiles/ok_cancel.html" title="<b>DCL</b> Tile: ok_cancel">ok_cancel</a>_help tiles.</p>
+	<h4>Valid Attributes</h4>
+<p><b>: button</b> {</p>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/action.html" title="DCL Tile: action">action</a> = "(string)";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/alignment.html" title="DCL Tile: alignment">alignment</a> = position;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_height.html" title="DCL Tile: fixed_height">fixed_height</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_width.html" title="DCL Tile: fixed_width">fixed_width</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/height.html" title="DCL Tile: height">height</a> = number;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/is_cancel.html" title="DCL Tile: is_cancel">is_cancel</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/is_default.html" title="DCL Tile: is_default">is_default</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/is_enabled.html" title="DCL Tile: is_enabled">is_enabled</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/is_tab_stop.html" title="DCL Tile: is_tab_stop">is_tab_stop</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/key.html" title="DCL Tile: key">key</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/label.html" title="DCL Tile: label">label</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/mnemonic.html" title="DCL Tile: mnemonic">mnemonic</a> = "char";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/width.html" title="DCL Tile: width">width</a> = number;</p></b>
+<p>}</p>
+	<h4>EXAMPLE</h4>
+<p><b>: button</b> {</p>
+<p><b>action</b> = "(convdxf)";</p>
+<p>label="Convert to DXF";</p>
+<p>mnemonic="C";</p>
+<p>key="BC";</p>
+<p>}</p>
+	<h4>NOTE</h4>
+<p>The <a href="qrc:/html/predefined-attributes/label.html" title="<b>DCL</b> Attribute: label">label</a> attribute indicates the text on the button-for</p>
+	<h4>EXAMPLE</h4>
+<p><b>label</b> = "Sync Grid to Snap"</p>
+	<h4>Related <b>DCL</b> Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/edit_box.html" title="DCL Tile: edit_box">edit_box</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/image_button.html" title="DCL Tile: image_button">image_button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/list_box.html" title="DCL Tile: list_box">list_box</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/popup_list.html" title="DCL Tile: popup_list">popup_list</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_button.html" title="DCL Tile: radio_button">radio_button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/slider.html" title="DCL Tile: slider">slider</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/toggle.html" title="DCL Tile: toggle">toggle</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/dcl-tiles/column.html" title="DCL Tile: column">column</a></p></b>
+</body>
+</html>

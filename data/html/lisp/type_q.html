@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>type_q</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+<p>(<b>type?</b> item)</p>
+	<hr/>
+<p>Determine the type? (for example, file, integer, string, and so forth) of an item.</p>
+	<hr/>
+<p>Identify the category of an item, such as file, integer, string, etc. The subsequent table enumerates the different types along with their definitions.</p>
+<p>Types   Meaning</p>
+<p>ENAME   Entity name.</p>
+<p>FILE    File descriptor.</p>
+<p>INT     Integer number.</p>
+<p>LIST    List and user-defined function.</p>
+<p>PAGETB  Function paging table.</p>
+<p>PICKSET Selection set.</p>
+<p>REAL    Real number.</p>
+<p>STR     String.</p>
+<p>SUBR    Subroutines: <b>LISP</b> functions.</p>
+<p>SYM     Symbol.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>type?</b> 2)<td/>
+	<td>INT<td/>
+	</tr>	<tr>
+	<td>(<b>type?</b> 2.0)<td/>
+	<td>REAL<td/>
+	</tr>	<tr>
+	<td>(<b>type?</b> "Street")<td/>
+	<td>STR<td/>
+	</tr>	<tr>
+	<td>(<b>type?</b> setq)<td/>
+	<td>SUBR<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> x (<b>open</b> "C:\\my.fil" "w")))<td/>
+	<td>(<b>setq</b> x (<b>open</b> "C:\\my.fil" "w"))<td/>
+	</tr>	<tr>
+	<td>(<b>type?</b> x)<td/>
+	<td>FILE<td/>
+	</tr>	<tr>
+	<td>(<b>type?</b> 'x)<td/>
+	<td>SYM<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> entinfo (entsel)))<td/>
+	<td>(<b>setq</b> entinfo (entsel))<td/>
+	</tr>	<tr>
+	<td>(<b>type?</b> entinfo)<td/>
+	<td>ENAME Could Return:<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> ourset (ssget))<td/>
+	<td><Selection set: 2><td/>
+	</tr>	<tr>
+	<td>(<b>type?</b> ourset)<td/>
+	<td>PICKSET<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/atom.html" title="LISP Function (atom item)">(atom item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/boundp.html" title="LISP Function (boundp item)">(boundp item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/listp.html" title="LISP Function (listp item)">(listp item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/not.html" title="LISP Function (not item)">(not item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/null.html" title="LISP Function (null item)">(null item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/numberp.html" title="LISP Function (numberp item)">(numberp item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+ssget	<b><p><a href="qrc:/html/lisp/zerop.html" title="LISP Function (zerop number)">(zerop number)</a></p></b>
+</body>
+</html>

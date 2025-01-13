@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>strcat</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(strcat string1 [string2] ...)</h2>
+	<hr/>
+<p>Combine all of these smaller strings into a single, cohesive string.</p>
+	<hr/>
+<p>This function performs the operation of joining strings, commonly referred to as concatenation.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> a "Jack and Jill")<td/>
+	<td>"Jack and Jill"<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> b " went up the hill")<td/>
+	<td>"went up the hill"<td/>
+	</tr>	<tr>
+	<td>(<b>strcat</b> a b )<td/>
+	<td>"Jack and Jill went up the hill"<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/strlen.html" title="LISP Function (strlen [string1] [string2] )">(strlen [string1] [string2] )</a></p></b>
+	<b><p><a href="qrc:/html/lisp/substr.html" title="LISP Function (substr string start [length])">(substr string start [length])</a></p></b>
+</body>
+</html>

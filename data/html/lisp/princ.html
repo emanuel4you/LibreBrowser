@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>princ</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(princ [expression [file-descriptor]])</h2>
+	<hr/>
+<p>Print, taking into account control characters.</p>
+	<hr/>
+<p>This function outputs content either to a file or to the display screen. If a file descriptor is specified, <b>LISP</b> directs the output to a file; if the file descriptor is absent, the output is sent to the Prompt History window.</p>
+<p>When outputting to a file, it is essential that the file has been created beforehand.</p>
+<p>The argument expression denotes the content to be printed. This can encompass any type of expression, not limited to strings. The expression will be printed along with a newline character.</p>
+<p>In contrast to the functions <a href="qrc:/html/lisp/print.html" title="<b>LISP</b> Function (<b>print</b>)">(<b>print</b>)</a> and <a href="qrc:/html/lisp/prin1.html" title="<b>LISP</b> Function (<b>prin1</b>)">(<b>prin1</b>)</a>, the princ function processes any control characters found within the expression. The following control characters may be utilized within the expression:</p>
+<p>Control Character        Meaning</p>
+<p>\\                \ backslash character</p>
+<p>\"                " quote character</p>
+<p>\e                Escape</p>
+<p>\n                Newline</p>
+<p>\r                Return</p>
+<p>\t                Tab</p>
+<p>\nnn              Octal code nnn</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>princ</b> "\nName:")<td/>
+	<td>(new line)<td/>
+	</tr>	<tr>
+	<td>Name: "\n Name:")<td/>
+	<td>Name: "\n Name:"<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> a "Address: "))<td/>
+	<td>(<b>setq</b> a "Address: ")<td/>
+	</tr>	<tr>
+	<td>(<b>princ</b> a)<td/>
+	<td>Address: "Address: "<td/>
+	</tr>	<tr>
+	<td>(<b>princ</b> 'a)<td/>
+	<td>A A<td/>
+	</tr>	<tr>
+	<td>(<b>princ</b> "Telephone: " f)<td/>
+	<td>Telephone: (to file f) "Telephone: "<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>It is important to note that the princ function differs from <b>LISP</b>'s other printing functions, such as print and prin1, in that it specifically addresses control characters.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/prompt.html" title="LISP Function (prompt string)">(prompt string)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/terpri.html" title="LISP Function (terpri)">(terpri)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/write-line.html" title="LISP Function (write-line string [file-descriptor])">(write-line string [file-descriptor])</a></p></b>
+</body>
+</html>

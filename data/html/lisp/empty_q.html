@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>empty_q</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+<p>(<b>empty?</b> coll)</p>
+	<hr/>
+<p>Returns true if coll has no items.</p>
+	<hr/>
+<p>This function Returns true if coll has no items - same as (<b>not</b> (<b>seq</b> coll)).</p>
+	<h4>NOTE</h4>
+<p>Please use the idiom (<b>seq</b> x) rather than (<b>not</b> (<b>empty?</b> x))</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>empty?</b> '())<td/>
+	<td>true<td/>
+	</tr>	<tr>
+	<td>(<b>empty?</b> '(1))<td/>
+	<td>false<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/list.html" title="LISP Function (list expression )">(list expression )</a></p></b>
+	<b><p><a href="qrc:/html/lisp/number_q.html" title="LISP Function (number? item)">(number? item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/reverse.html" title="LISP Function (reverse list)">(reverse list)</a></p></b>
+</body>
+</html>

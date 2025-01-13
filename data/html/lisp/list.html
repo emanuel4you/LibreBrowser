@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>list</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(list expression ...)</h2>
+	<hr/>
+<p>Make it a list.</p>
+	<hr/>
+<p>This function generates a list based on the specified expressions. The last example illustrates this process. Instead of utilizing elements that are already defined as a list, you may need to construct your own list. This newly created list will serve as a variable, with its values introduced by the command list.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> b (<b>list</b> 1 2))<td/>
+	<td>(1 2)<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> c (<b>list</b> "string1" "string2"))<td/>
+	<td>("string1" "string2")<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> a (<b>list</b> (<b>car</b> b)<td/>
+	<td>(<b>car</b> c)))     (1 "string2")<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> d '(1 2 "buckle my shoe"))<td/>
+	<td>(1 2 "buckle my shoe")<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/cons.html" title="LISP Function (cons item list)">(cons item list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/length.html" title="LISP Function (length list)">(length list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/listp.html" title="LISP Function (listp item)">(listp item)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+</body>
+</html>

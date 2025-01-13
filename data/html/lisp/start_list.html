@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>start_list</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(start_list key [operation [index]])</h2>
+	<hr/>
+<p>Start processing a list box.</p>
+	<hr/>
+<p>This function initiates the processing of a list key within a dialog box. The optional operation parameter specifies the type of list operation to be executed, with a default value of 3:</p>
+<p>Operation Meaning</p>
+<p>1 Modify the contents of the list.</p>
+<p>2 Add new data to the list.</p>
+<p>3 Substitute the existing list with a new one (default).</p>
+<p>The optional index parameter is applicable only when the operation is set to 1. It denotes the item number to be modified, where the first item is numbered as 0, the second as 1, and so forth.</p>
+	<h4>EXAMPLES</h4>
+<p>Code                 Comments</p>
+<p>(<b>start_list</b> ssg)     Replace list with new list.</p>
+<p>(<b>start_list</b> ssg 3)   Performs the same action as above.</p>
+<p>(<b>start_list</b> ssg 2)   Adds data to the existing list.</p>
+	<h4>NOTE</h4>
+<p>This function is also utilized when creating list boxes and drop-down menus with <b>DCL</b>; refer to <a href="qrc:/html/lisp/list.html" title="<b>LISP</b> Function (<b>list</b>)">(<b>list</b>)</a>_box and [link]popup_list (drop-down list box) for further details.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/add_list.html" title="LISP Function (add_list string)">(add_list string)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/end_list.html" title="LISP Function (end_list)">(end_list)</a></p></b>
+</body>
+</html>

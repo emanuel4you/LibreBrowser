@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>cons</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(cons item list)</h2>
+	<hr/>
+<p>Add this item to the beginning of the list.</p>
+	<hr/>
+<p>This function generates a new list by utilizing distinct elements. It serves to access entity data. A dotted-pair is formed exclusively when the function is employed to combine two individual items in the format (<b>cons</b> item item).</p>
+<p>The initial argument, item, represents the element that will be appended to the start of the list. Although the item can be a list in its own right, it will still be regarded as a singular item within the list.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>cons</b> 'a '(b c d))<td/>
+	<td>(A B C D)<td/>
+	</tr>	<tr>
+	<td>(<b>cons</b> 'a 'b)<td/>
+	<td>(A . B) (Dotted pair)<td/>
+	</tr>	<tr>
+	<td>(<b>cons</b> '(a b)<td/>
+	<td>'(c d)) ((A B) C D)<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/append.html" title="LISP Function (append list1 list2 ...)">(append list1 list2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/length.html" title="LISP Function (length list)">(length list)</a></p></b>
+member</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>radio_column</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Tiles</h2>
+	<h2><b>: radio_column</b></h2>
+	<hr/>
+<p>Display a <i>vertical</i> column of radio buttons.</p>
+<p><b>DCL</b> Cluster Tile</p>
+	<hr/>
+<p>This cluster tile organizes one or more radio buttons in a <i>vertical</i> arrangement. A radio_button tile must be <i>position</i>ed either within this tile or within a radio_row cluster tile. If not, the program will be unable to determine the relationships among the radio buttons.</p>
+	<h4>NOTE</h4>
+<p>A radio_column cluster is exclusively for radio buttons. For other types of tiles, the column cluster should be utilized.</p>
+	<h4>Valid Attributes</h4>
+<p><b>: radio_column</b> {</p>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/alignment.html" title="DCL Tile: alignment">alignment</a> = position;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/children_alignment.html" title="DCL Tile: children_alignment">children_alignment</a> = position;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/children_fixed_height.html" title="DCL Tile: children_fixed_height">children_fixed_height</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/children_fixed_width.html" title="DCL Tile: children_fixed_width">children_fixed_width</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_height.html" title="DCL Tile: fixed_height">fixed_height</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_width.html" title="DCL Tile: fixed_width">fixed_width</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/height.html" title="DCL Tile: height">height</a> = number;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/label.html" title="DCL Tile: label">label</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/value.html" title="DCL Tile: value">value</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/width.html" title="DCL Tile: width">width</a> = number;</p></b>
+<p>}</p>
+	<h4>EXAMPLE</h4>
+<p><b>: radio_column</b> {</p>
+<p><b>label</b> = "3D Viewpoints";</p>
+<p><b>: radio_button</b> {</p>
+<p><b>action</b> = "(frontview)";</p>
+<p><b>key</b> = "R1";</p>
+<p><b>label</b> = "Front View";</p>
+<p>}</p>
+<p><b>: radio_button</b> {</p>
+<p><b>action</b> = "(topview)";</p>
+<p><b>key</b> = "R2";</p>
+<p><b>label</b> = "Top View";</p>
+<p>}</p>
+<p>}</p>
+	<h4>NOTE</h4>
+<p>The <b>value</b> attribute signifies which radio button is currently selected, represented by the <b>value</b> of "1":</p>
+<p><b>value</b> = "1"</p>
+	<h4>Related <b>DCL</b> Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/dialog.html" title="DCL Tile: dialog">dialog</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/column.html" title="DCL Tile: column">column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/row.html" title="DCL Tile: row">row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_column.html" title="DCL Tile: boxed_column">boxed_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_row.html" title="DCL Tile: boxed_row">boxed_row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_radio_column.html" title="DCL Tile: boxed_radio_column">boxed_radio_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_radio_row.html" title="DCL Tile: boxed_radio_row">boxed_radio_row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_column.html" title="DCL Tile: radio_column">radio_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_row.html" title="DCL Tile: radio_row">radio_row</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/dcl-tiles/radio_row.html" title="DCL Tile: radio_row">radio_row</a></p></b>
+</body>
+</html>

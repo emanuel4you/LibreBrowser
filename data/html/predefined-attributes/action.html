@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>action</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Attributes</h2>
+	<h2><b>action</b> = "(function)";</h2>
+	<hr/>
+<p>Execute this <b>LISP</b> function.</p>
+	<hr/>
+<p>This attribute serves as a callback that triggers a <b>LISP</b> function when the user interacts with a specific tile.</p>
+<p>For string input, indicate the <b>name</b> of the <b>LISP</b> function.</p>
+	<h4>EXAMPLE</h4>
+<p><b>action</b> = "(function)";</p>
+	<h4>NOTE</h4>
+	<ul>
+		<li>It is important to recognize that the tile <b>action</b>, refer<i>red</i> to as a callback function, is typically defined by the controlling program through the <b><b>action</b>_tile</b> function. If an <b>action</b> is established by the calling program, the <b>action</b> specified in <b>DCL</b> will be disregarded.</li></br>
+		<li>The <b>action</b> attribute is also capable of invoking a Python function.</li></br>
+		<li>A tile can only have one <b>action</b> assigned to it, and if <b><b>action</b>_tile</b> is assigned by the program, it takes precedence over any other <b>action</b>.</li></br>
+	</ul>
+	<h4>Valid Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/button.html" title="DCL Tile: button">button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/popup_list.html" title="DCL Tile: popup_list">popup_list</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/edit_box.html" title="DCL Tile: edit_box">edit_box</a></p></b>
+<b><p><a href=".html" title="">multi_edit_box</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_button.html" title="DCL Tile: radio_button">radio_button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/image_button.html" title="DCL Tile: image_button">image_button</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/dial.html" title="DCL Tile: dial">dial</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/scroll.html" title="DCL Tile: scroll">scroll</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/slider.html" title="DCL Tile: slider">slider</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/list_box.html" title="DCL Tile: list_box">list_box</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/toggle.html" title="DCL Tile: toggle">toggle</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/predefined-attributes/alignment.html" title="DCL Attribute: alignment">alignment</a></p></b>
+</body>
+</html>

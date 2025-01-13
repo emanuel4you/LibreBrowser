@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>load_dialog</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(load_dialog filename)</h2>
+	<hr/>
+<p>Load that dialog box definition file.</p>
+	<hr/>
+<p>To display a custom dialog box in <b>LibreCAD</b>, it is necessary to load the corresponding dialog box definition file. The filename parameter refers to the name of the <b>DCL</b> file.</p>
+<p>This function will return the id of the loaded <b>DCL</b> file as a positive integer, or -1 if the <b>DCL</b> file fails to load.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>load_dialog</b> "my_dcl")<td/>
+	<td>3<td/>
+	</tr>	<tr>
+	<td>(<b>load_dialog</b> "no_file_dcl")<td/>
+	<td>-1<td/>
+	</tr>	</table>
+	<h4>NOTE</h4>
+<p>The sequence for invoking a dialog box is as follows:</p>
+	<ol>
+		<li><a href="qrc:/html/lisp/load_dialog.html" title="LISP Function (load_dialog)">(load_dialog)</a></li></br>
+		<li><a href="qrc:/html/lisp/new_dialog.html" title="LISP Function (new_dialog)">(new_dialog)</a></li></br>
+		<li><a href="qrc:/html/lisp/action_tile.html" title="LISP Function (action_tile)">(action_tile)</a>, <a href="qrc:/html/lisp/start_image.html" title="LISP Function (start_image)">(start_image)</a>, <a href="qrc:/html/lisp/start_list.html" title="LISP Function (start_list)">(start_list)</a>, etc. (This includes all necessary dialog box initialization steps, such as linking actions to tiles, creating images, and preparing lists for list boxes).</li></br>
+	</ol>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/unload_dialog.html" title="LISP Function (unload_dialog dcl_id)">(unload_dialog dcl_id)</a></p></b>
+</body>
+</html>

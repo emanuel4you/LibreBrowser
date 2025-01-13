@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+     		th { text-align: left; }
+	</style>
+	<titel>initGet</titel>
+</head>
+<body>
+	<h2>PYTHON Functions</h2>
+	<h2>None initGet(<i>string</i> str="", int bit=0)</h2>
+	<hr/>
+<p>Defines keywords to be utilized in the subsequent user-input function invocation.</p>
+	<hr/>
+<p>prompt argument str is a <i>string</i></p>
+<p>bit is an <i>integer</i>.</p>
+<p>A bit-coded system that regulates specific types of user input. The bits can be combined in various ways to create a value ranging from 0 to 255. In the absence of a bits argument, a default value of zero (indicating no restrictions) is assumed. The bit values are defined as follows:</p>
+<p>1 (bit 0) -- Restricts the user from responding to the request by simply pressing Enter.</p>
+<p>2 (bit 1) -- Restricts the user from responding to the request by entering a zero.</p>
+<p>4 (bit 2) -- Restricts the user from responding to the request by entering a negative number.</p>
+<p>8 (bit 3) -- Permits the user to input a point beyond the current drawing boundaries. This condition is applicable to the subsequent user-input function, regardless of the current setting of the LIMCHECK system variable.</p>
+<p>16 (bit 4) -- (Currently not in use.)</p>
+<p>32 (bit 5) -- Utilizes dashed lines when creating a rubber-band line or box. For functions that allow the user to specify a point by selecting a location within the drawing area, this bit value results in a dashed rubber-band line or box instead of a solid one. (Certain display drivers may use a distinct color in place of dashed lines.) If the <b>LibreCAD</b> POPUPS system variable is set to 0, this bit is disregarded by <b>LibreCAD</b>.</p>
+<p>64 (bit 6) -- Disallows the input of a Z coordinate in the getdist function, enabling an application to ensure that this function returns a 2D distance.</p>
+<p>128 (bit 7) -- Permits arbitrary input as if it were a keyword, while still respecting any other control bits and specified keywords. This bit takes precedence over bit 0; if both bits 7 and 0 are activated and the user presses Enter, a null <i>string</i> will be returned.</p>
+<p>256 (bit 8) -- Grants precedence to direct distance input over arbitrary input. For external applications, arbitrary input is prioritized over direct distance input by default. Activate this bit if you want to compel <b>LibreCAD</b> to treat user input as direct distance input. It is important to note that valid point input from the keyboard always takes precedence over both direct distance and arbitrary input.</p>
+<p>512 (bit 9) -- When activated prior to a call to getpoint or getcorner, a temporary User Coordinate System (UCS) will be established when the cursor is active.</p>
+	<h4>More about...</h4>
+   [link]getKeyword
+</body>
+</html>

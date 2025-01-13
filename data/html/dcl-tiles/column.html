@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+	</style>
+	<titel>column</titel>
+</head>
+<body>
+	<h2><b>DCL</b> Tiles</h2>
+	<h2><b>: column</b></h2>
+	<hr/>
+<p>Position a column of tiles, which may include an optional title</p>
+<p><b>DCL</b> Cluster Tile</p>
+	<hr/>
+<p>This cluster tile organizes a sequence of tiles in a <i>vertical</i> alignment without any borders. The column cluster is capable of accommodating any tile type, with the exception of a standalone <a href="qrc:/html/dcl-tiles/radio_button.html" title="<b>DCL</b> Tile: radio_button">radio_button</a>. To enclose the column of tiles within a border, utilize the <a href="qrc:/html/dcl-tiles/boxed_column.html" title="<b>DCL</b> Tile: boxed_column">boxed_column</a> cluster.</p>
+	<h4>NOTE</h4>
+<p>Columns will not feature titles unless they are enclosed in a box.</p>
+	<h4>Valid Attributes</h4>
+<p><b>: column</b> {</p>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/alignment.html" title="DCL Tile: alignment">alignment</a> = position;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/children_alignment.html" title="DCL Tile: children_alignment">children_alignment</a> = position;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/children_fixed_height.html" title="DCL Tile: children_fixed_height">children_fixed_height</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/children_fixed_width.html" title="DCL Tile: children_fixed_width">children_fixed_width</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_height.html" title="DCL Tile: fixed_height">fixed_height</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/fixed_width.html" title="DCL Tile: fixed_width">fixed_width</a> = flag;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/height.html" title="DCL Tile: height">height</a> = number;</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/label.html" title="DCL Tile: label">label</a> = "string";</p></b>
+<b><p style="padding-left: 35px;"><a href="qrc:/html/predefined-attributes/width.html" title="DCL Tile: width">width</a> = number;</p></b>
+<p>}</p>
+	<h4>EXAMPLE</h4>
+<p><b>: column</b> {</p>
+<p><b>: button</b> {</p>
+<p><b>action</b> = "(linecmd)";</p>
+<p><b>key</b> = "BL";</p>
+<p><b>label</b> = "Line";</p>
+<p>}</p>
+<p><b>: button</b> {</p>
+<p><b>action</b> = "(arccmd)";</p>
+<p><b>key</b> = "BA";</p>
+<p><b>label</b> = "Arc";</p>
+<p>}</p>
+<p>}</p>
+	<h4>Related <b>DCL</b> Tiles</h4>
+<b><p><a href="qrc:/html/dcl-tiles/dialog.html" title="DCL Tile: dialog">dialog</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/row.html" title="DCL Tile: row">row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_column.html" title="DCL Tile: boxed_column">boxed_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_row.html" title="DCL Tile: boxed_row">boxed_row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_radio_column.html" title="DCL Tile: boxed_radio_column">boxed_radio_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/boxed_radio_row.html" title="DCL Tile: boxed_radio_row">boxed_radio_row</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_column.html" title="DCL Tile: radio_column">radio_column</a></p></b>
+<b><p><a href="qrc:/html/dcl-tiles/radio_row.html" title="DCL Tile: radio_row">radio_row</a></p></b>
+	<h4>More about...</h4>
+<b><p><a href="qrc:/html/dcl-tiles/concatenation.html" title="DCL Tile: concatenation">concatenation</a></p></b>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>start_dialog</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(start_dialog)</h2>
+	<hr/>
+<p>Start a dialog box.</p>
+	<hr/>
+<p>This function presents a dialog box and registers the clicks made by the user using the mouse button. It returns a status code that is provided to it by the following:</p>
+<p>Code Meaning</p>
+<p>1 User clicked the OK button.</p>
+<p>0 User clicked the Cancel button or an error occurred.</p>
+<p>-1 The <a href="qrc:/html/lisp/term_dialog.html" title="<b>LISP</b> Function (<b>term_dialog</b>)">(<b>term_dialog</b>)</a> function was invoked.</p>
+	<h4>EXAMPLE</h4>
+<p>(<b>start_dialog</b>)</p>
+	<h4>NOTES</h4>
+<p>The dialog box is initially set up by the new_dialog function. The sequence for invoking a dialog box is as follows:</p>
+	<b><p><a href="qrc:/html/lisp/load_dialog.html" title="LISP Function (load_dialog)">load_dialog</a></p></b>
+	<b><p><a href="qrc:/html/lisp/new_dialog.html" title="LISP Function (new_dialog)">new_dialog</a></p></b>
+<p>This includes the initialization of the dialog box, which involves linking actions to tiles, creating images, and preparing lists for list boxes.</p>
+	<b><p><a href="qrc:/html/lisp/start_dialog.html" title="LISP Function (start_dialog)">start_dialog</a></p></b>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/term_dialog.html" title="LISP Function (term_dialog)">(term_dialog)</a></p></b>
+</body>
+</html>

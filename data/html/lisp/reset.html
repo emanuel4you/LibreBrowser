@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>reset</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(reset! atom f)</h2>
+	<hr/>
+<p>Atomically resets the value of atom</p>
+	<hr/>
+<p>Sets the value of atom to newval without regard for the current value. Returns newval.</p>
+	<h4>EXAMPLE</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>def!</b> x (<b>atom</b> 10))<td/>
+	<td>(<b>atom</b> 10)<td/>
+	</tr>	<tr>
+	<td>(<b>reset!</b> x 20)<td/>
+	<td>20<td/>
+	</tr>	<tr>
+	<td>!x (<b>atom</b> 20))<td/>
+	<td>!x (<b>atom</b> 20)<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/defun.html" title="LISP Function (defun [c:] name [arg1 arg2 ...] / [local-var1 local-var2 ...] expression)">(defun [c:] name ([arg1 arg2 ...] / [local-var1 local-var2 ...]) expression)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/help.html" title="LISP Function (help "func")">(help "func")</a></p></b>
+</body>
+</html>

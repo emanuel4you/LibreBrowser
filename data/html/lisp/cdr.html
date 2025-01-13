@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>cdr</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(cdr list)</h2>
+	<hr/>
+<p>Get everything in a list except the first item.</p>
+	<hr/>
+<p>This function serves as a secondary operation for deconstructing a list. It retrieves the second element of the list along with all subsequent elements. For instance, if the list comprises the values (5.0, 3.0, 1.0), employing the cdr function would yield 3.0, 1.0.</p>
+	<h4>EXAMPLES</h4>
+	<table>
+	<tr>
+	<th>Code<th/>
+	<th>Returns<th/>
+	</tr>	<tr>
+	<td>(<b>setq</b> a '("one" "two" "three" "four")<td/>
+	<td>("one" "two" "three" "four")<td/>
+	</tr>	<tr>
+	<td>(<b>setq</b> b (<b>cdr</b> a))<td/>
+	<td>("TWO" "THREE" "FOUR")<td/>
+	</tr>	</table>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/append.html" title="LISP Function (append list1 list2 ...)">(append list1 list2 ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/cons.html" title="LISP Function (cons item list)">(cons item list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/last.html" title="LISP Function (last list)">(last list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/length.html" title="LISP Function (length list)">(length list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/list.html" title="LISP Function (list expression )">(list expression )</a></p></b>
+	<b><p><a href="qrc:/html/lisp/reverse.html" title="LISP Function (reverse list)">(reverse list)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+</body>
+</html>

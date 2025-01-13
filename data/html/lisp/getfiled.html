@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>getfiled</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(getfiled title filename ext flags)</h2>
+	<hr/>
+<p>Display the Select File dialog box.</p>
+	<hr/>
+<p>This function presents the file dialog box of the operating system, enabling the user to choose a file.</p>
+<p>The title argument determines the title of the file dialog box, which is displayed on the title bar. To create a title bar with no text, enter " ", but the argument cannot be left empty.</p>
+<p>The filename argument sets the default filename that is highlighted in the File name section of the dialog box. To indicate no default filename, enter " ", but again, the argument must not be left blank.</p>
+<p>The ext argument defines the file type, such as "dxf", "txt", or "lsp". If the argument is " ", no specific file type is indicated. To include all file types, use "*" as the argument.</p>
+<p>The flags argument is a bitcode that outlines options for the getfiled function.</p>
+<p>Bit code Meaning</p>
+<p>1 Alerts the user regarding the potential overwriting of an existing file.</p>
+<p>You may combine the bits to select multiple options. For instance, using this bit will notify the user about overwriting an existing file while allowing them to change the file extension.</p>
+	<h4>EXAMPLES</h4>
+<p>(<b>getfiled</b> "Drawing Files" " " "DWG" 2)</p>
+<p>(<b>getfiled</b> "<b>LISP</b> Files" "sample.lsp" "LSP" 6)</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/alert.html" title="LISP Function (alert string)">(alert string)</a></p></b>
+findfile	<b><p><a href="qrc:/html/lisp/load.html" title="LISP Function (load filename [flag])">(load filename [flag])</a></p></b>
+	<b><p><a href="qrc:/html/lisp/open.html" title="LISP Function (open filename mode)">(open filename mode)</a></p></b>
+</body>
+</html>

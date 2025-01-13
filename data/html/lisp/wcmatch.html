@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<style>
+		:root { font-family: sans-serif; }
+		p { white-space: pre-wrap; padding-left: 15px; }
+		th { text-align: left; }
+	</style>
+	<titel>wcmatch</titel>
+</head>
+<body>
+	<h2>LISP Functions</h2>
+	<h2>(wcmatch string pattern)</h2>
+	<hr/>
+<p>Search that string.</p>
+	<hr/>
+<p>This function identifies internal string matches. It allows you to determine whether a specific string exists or to compare it with another string.</p>
+<p>For instance, if you have a string variable named MYVAR that contains the value "SUPERCALIFRAGILISTIC123\##" and you wish to check if the substring "FRAG" appears within it, you can utilize the wcmatch function as follows:</p>
+	<ul>
+		<li>(<b>wcmatch</b> MYVAR "*FRAG*")</li></br>
+	</ul>
+<p>If a match is detected, wcmatch will return T. Conversely, if no match is found, it will return nil. It is important to note that the wcmatch function is case-sensitive.</p>
+<p>Several wildcards can be employed with wcmatch:</p>
+<p>Wildcard Definition</p>
+<p>~ (tilde) Pattern not found in string.</p>
+	<ul>
+		<li>Standard wildcard; can be used anywhere.</li></br>
+	</ul>
+<p>? Matches for a space held by a character or number; number of question</p>
+<p>marks (?) must exactly match number of characters or numbers in the</p>
+<p>string.</p>
+<p>@@ Matches any single character; may not be a number.</p>
+<p>. (period) Matches any single non-alphanumeric character.</p>
+<p>(space) Matches one or more spaces.</p>
+<p>[ ] Matches for any of the characters enclosed in the brackets.</p>
+<p>[~ ] True only if there are extra characters not included in the</p>
+<p>brackets.</p>
+<p>[ - ] (hyphen) Searches within a predefined range pattern.</p>
+<p>, (comma) The "or" option.</p>
+<p>' (<b>reverse</b> quote) Read next character literally; use for special</p>
+<p>characters.</p>
+	<h4>EXAMPLES</h4>
+<p>Code Returns Comments</p>
+<p>(<b>wcmatch</b> N "*opic*" ) T "opic" is found with anything before and after.</p>
+<p>(<b>wcmatch</b> N "?????????????????????") T There are 21 characters, numbers</p>
+<p>and spaces in this string.</p>
+<p>(wmatch N "#####*") T Matches 5 digits, followed by anything.</p>
+	<h4>More about...</h4>
+	<b><p><a href="qrc:/html/lisp/setq.html" title="LISP Function (setq symbol1 statement1 [symbol2 statement2] ...)">(setq symbol1 statement1 [symbol2 statement2] ...)</a></p></b>
+	<b><p><a href="qrc:/html/lisp/substr.html" title="LISP Function (substr string start [length])">(substr string start [length])</a></p></b>
+</body>
+</html>
